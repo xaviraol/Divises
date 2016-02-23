@@ -1,0 +1,2285 @@
+{
+  "PCN" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "NZ$",
+    "country_capital" : "Adamstown",
+    "country_name" : "Pitcairn Islands",
+    "money_code" : "NZD",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "New Zealand Dollar"
+  },
+  "KIR" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "AU$",
+    "country_capital" : "South Tarawa",
+    "country_name" : "Kiribati",
+    "money_code" : "AUD",
+    "country_languages" : {
+      "eng" : "English",
+      "gil" : "Gilbertese"
+    },
+    "money_name" : "Australian Dollar"
+  },
+  "BGD" : {
+    "country_region" : "Asia",
+    "money_symbol" : "Tk",
+    "country_capital" : "Dhaka",
+    "country_name" : "Bangladesh",
+    "money_code" : "BDT",
+    "country_languages" : {
+      "ben" : "Bengali"
+    },
+    "money_name" : "Bangladeshi Taka"
+  },
+  "BDI" : {
+    "country_region" : "Africa",
+    "money_symbol" : "FBu",
+    "country_capital" : "Bujumbura",
+    "country_name" : "Burundi",
+    "money_code" : "BIF",
+    "country_languages" : {
+      "fra" : "French",
+      "run" : "Kirundi"
+    },
+    "money_name" : "Burundian Franc"
+  },
+  "MNE" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Podgorica",
+    "country_name" : "Montenegro",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "srp" : "Montenegrin"
+    },
+    "money_name" : "Euro"
+  },
+  "TCD" : {
+    "country_region" : "Africa",
+    "money_symbol" : "FCFA",
+    "country_capital" : "N'Djamena",
+    "country_name" : "Chad",
+    "money_code" : "XAF",
+    "country_languages" : {
+      "ara" : "Arabic",
+      "fra" : "French"
+    },
+    "money_name" : "CFA Franc BEAC"
+  },
+  "HTI" : {
+    "country_region" : "Americas",
+    "money_symbol" : "$",
+    "country_capital" : "Port-au-Prince",
+    "country_name" : "Haiti",
+    "money_code" : "USD",
+    "country_languages" : {
+      "fra" : "French",
+      "hat" : "Haitian Creole"
+    },
+    "money_name" : "US Dollar"
+  },
+  "MLI" : {
+    "country_region" : "Africa",
+    "money_symbol" : "CFA",
+    "country_capital" : "Bamako",
+    "country_name" : "Mali",
+    "money_code" : "XOF",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "CFA Franc BCEAO"
+  },
+  "NER" : {
+    "country_region" : "Africa",
+    "money_symbol" : "CFA",
+    "country_capital" : "Niamey",
+    "country_name" : "Niger",
+    "money_code" : "XOF",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "CFA Franc BCEAO"
+  },
+  "TWN" : {
+    "country_region" : "Asia",
+    "money_symbol" : "NT$",
+    "country_capital" : "Taipei",
+    "country_name" : "Taiwan",
+    "money_code" : "TWD",
+    "country_languages" : {
+      "cmn" : "Mandarin"
+    },
+    "money_name" : "New Taiwan Dollar"
+  },
+  "EST" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Tallinn",
+    "country_name" : "Estonia",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "est" : "Estonian"
+    },
+    "money_name" : "Euro"
+  },
+  "GAB" : {
+    "country_region" : "Africa",
+    "money_symbol" : "FCFA",
+    "country_capital" : "Libreville",
+    "country_name" : "Gabon",
+    "money_code" : "XAF",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "CFA Franc BEAC"
+  },
+  "GTM" : {
+    "country_region" : "Americas",
+    "money_symbol" : "GTQ",
+    "country_capital" : "Guatemala City",
+    "country_name" : "Guatemala",
+    "money_code" : "GTQ",
+    "country_languages" : {
+      "spa" : "Spanish"
+    },
+    "money_name" : "Guatemalan Quetzal"
+  },
+  "CYP" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Nicosia",
+    "country_name" : "Cyprus",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "ell" : "Greek",
+      "tur" : "Turkish"
+    },
+    "money_name" : "Euro"
+  },
+  "TUR" : {
+    "country_region" : "Asia",
+    "money_symbol" : "TL",
+    "country_capital" : "Ankara",
+    "country_name" : "Turkey",
+    "money_code" : "TRY",
+    "country_languages" : {
+      "tur" : "Turkish"
+    },
+    "money_name" : "Turkish Lira"
+  },
+  "CXR" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "AU$",
+    "country_capital" : "Flying Fish Cove",
+    "country_name" : "Christmas Island",
+    "money_code" : "AUD",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "Australian Dollar"
+  },
+  "ALA" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Mariehamn",
+    "country_name" : "Åland Islands",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "swe" : "Swedish"
+    },
+    "money_name" : "Euro"
+  },
+  "CAN" : {
+    "country_region" : "Americas",
+    "money_symbol" : "CA$",
+    "country_capital" : "Ottawa",
+    "country_name" : "Canada",
+    "money_code" : "CAD",
+    "country_languages" : {
+      "eng" : "English",
+      "fra" : "French"
+    },
+    "money_name" : "Canadian Dollar"
+  },
+  "CCK" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "AU$",
+    "country_capital" : "West Island",
+    "country_name" : "Cocos (Keeling) Islands",
+    "money_code" : "AUD",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "Australian Dollar"
+  },
+  "IRL" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Dublin",
+    "country_name" : "Ireland",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "eng" : "English",
+      "gle" : "Irish"
+    },
+    "money_name" : "Euro"
+  },
+  "ALB" : {
+    "country_region" : "Europe",
+    "money_symbol" : "ALL",
+    "country_capital" : "Tirana",
+    "country_name" : "Albania",
+    "money_code" : "ALL",
+    "country_languages" : {
+      "sqi" : "Albanian"
+    },
+    "money_name" : "Albanian Lek"
+  },
+  "GUM" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "$",
+    "country_capital" : "Hagåtña",
+    "country_name" : "Guam",
+    "money_code" : "USD",
+    "country_languages" : {
+      "cha" : "Chamorro",
+      "eng" : "English",
+      "spa" : "Spanish"
+    },
+    "money_name" : "US Dollar"
+  },
+  "BEL" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Brussels",
+    "country_name" : "Belgium",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "deu" : "German",
+      "fra" : "French",
+      "nld" : "Dutch"
+    },
+    "money_name" : "Euro"
+  },
+  "JPN" : {
+    "country_region" : "Asia",
+    "money_symbol" : "¥",
+    "country_capital" : "Tokyo",
+    "country_name" : "Japan",
+    "money_code" : "JPY",
+    "country_languages" : {
+      "jpn" : "Japanese"
+    },
+    "money_name" : "Japanese Yen"
+  },
+  "ISL" : {
+    "country_region" : "Europe",
+    "money_symbol" : "Ikr",
+    "country_capital" : "Reykjavik",
+    "country_name" : "Iceland",
+    "money_code" : "ISK",
+    "country_languages" : {
+      "isl" : "Icelandic"
+    },
+    "money_name" : "Icelandic Króna"
+  },
+  "MEX" : {
+    "country_region" : "Americas",
+    "money_symbol" : "MX$",
+    "country_capital" : "Mexico City",
+    "country_name" : "Mexico",
+    "money_code" : "MXN",
+    "country_languages" : {
+      "spa" : "Spanish"
+    },
+    "money_name" : "Mexican Peso"
+  },
+  "QAT" : {
+    "country_region" : "Asia",
+    "money_symbol" : "QR",
+    "country_capital" : "Doha",
+    "country_name" : "Qatar",
+    "money_code" : "QAR",
+    "country_languages" : {
+      "ara" : "Arabic"
+    },
+    "money_name" : "Qatari Rial"
+  },
+  "IRN" : {
+    "country_region" : "Asia",
+    "money_symbol" : "IRR",
+    "country_capital" : "Tehran",
+    "country_name" : "Iran",
+    "money_code" : "IRR",
+    "country_languages" : {
+      "fas" : "Persian"
+    },
+    "money_name" : "Iranian Rial"
+  },
+  "PHL" : {
+    "country_region" : "Asia",
+    "money_symbol" : "₱",
+    "country_capital" : "Manila",
+    "country_name" : "Philippines",
+    "money_code" : "PHP",
+    "country_languages" : {
+      "eng" : "English",
+      "fil" : "Filipino"
+    },
+    "money_name" : "Philippine Peso"
+  },
+  "SYR" : {
+    "country_region" : "Asia",
+    "money_symbol" : "SY£",
+    "country_capital" : "Damascus",
+    "country_name" : "Syria",
+    "money_code" : "SYP",
+    "country_languages" : {
+      "ara" : "Arabic"
+    },
+    "money_name" : "Syrian Pound"
+  },
+  "TUV" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "AU$",
+    "country_capital" : "Funafuti",
+    "country_name" : "Tuvalu",
+    "money_code" : "AUD",
+    "country_languages" : {
+      "eng" : "English",
+      "tvl" : "Tuvaluan"
+    },
+    "money_name" : "Australian Dollar"
+  },
+  "THA" : {
+    "country_region" : "Asia",
+    "money_symbol" : "฿",
+    "country_capital" : "Bangkok",
+    "country_name" : "Thailand",
+    "money_code" : "THB",
+    "country_languages" : {
+      "tha" : "Thai"
+    },
+    "money_name" : "Thai Baht"
+  },
+  "IOT" : {
+    "country_region" : "Africa",
+    "money_symbol" : "$",
+    "country_capital" : "Diego Garcia",
+    "country_name" : "British Indian Ocean Territory",
+    "money_code" : "USD",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "US Dollar"
+  },
+  "BEN" : {
+    "country_region" : "Africa",
+    "money_symbol" : "CFA",
+    "country_capital" : "Porto-Novo",
+    "country_name" : "Benin",
+    "money_code" : "XOF",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "CFA Franc BCEAO"
+  },
+  "PER" : {
+    "country_region" : "Americas",
+    "money_symbol" : "S\/.",
+    "country_capital" : "Lima",
+    "country_name" : "Peru",
+    "money_code" : "PEN",
+    "country_languages" : {
+      "aym" : "Aymara",
+      "que" : "Quechua",
+      "spa" : "Spanish"
+    },
+    "money_name" : "Peruvian Nuevo Sol"
+  },
+  "JOR" : {
+    "country_region" : "Asia",
+    "money_symbol" : "JD",
+    "country_capital" : "Amman",
+    "country_name" : "Jordan",
+    "money_code" : "JOD",
+    "country_languages" : {
+      "ara" : "Arabic"
+    },
+    "money_name" : "Jordanian Dinar"
+  },
+  "LVA" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Riga",
+    "country_name" : "Latvia",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "lav" : "Latvian"
+    },
+    "money_name" : "Euro"
+  },
+  "UGA" : {
+    "country_region" : "Africa",
+    "money_symbol" : "USh",
+    "country_capital" : "Kampala",
+    "country_name" : "Uganda",
+    "money_code" : "UGX",
+    "country_languages" : {
+      "eng" : "English",
+      "swa" : "Swahili"
+    },
+    "money_name" : "Ugandan Shilling"
+  },
+  "BIH" : {
+    "country_region" : "Europe",
+    "money_symbol" : "KM",
+    "country_capital" : "Sarajevo",
+    "country_name" : "Bosnia and Herzegovina",
+    "money_code" : "BAM",
+    "country_languages" : {
+      "bos" : "Bosnian",
+      "hrv" : "Croatian",
+      "srp" : "Serbian"
+    },
+    "money_name" : "Bosnia-Herzegovina Convertible Mark"
+  },
+  "URY" : {
+    "country_region" : "Americas",
+    "money_symbol" : "$U",
+    "country_capital" : "Montevideo",
+    "country_name" : "Uruguay",
+    "money_code" : "UYU",
+    "country_languages" : {
+      "spa" : "Spanish"
+    },
+    "money_name" : "Uruguayan Peso"
+  },
+  "HUN" : {
+    "country_region" : "Europe",
+    "money_symbol" : "Ft",
+    "country_capital" : "Budapest",
+    "country_name" : "Hungary",
+    "money_code" : "HUF",
+    "country_languages" : {
+      "hun" : "Hungarian"
+    },
+    "money_name" : "Hungarian Forint"
+  },
+  "IRQ" : {
+    "country_region" : "Asia",
+    "money_symbol" : "IQD",
+    "country_capital" : "Baghdad",
+    "country_name" : "Iraq",
+    "money_code" : "IQD",
+    "country_languages" : {
+      "ara" : "Arabic",
+      "arc" : "Aramaic",
+      "ckb" : "Sorani"
+    },
+    "money_name" : "Iraqi Dinar"
+  },
+  "AND" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Andorra la Vella",
+    "country_name" : "Andorra",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "cat" : "Catalan"
+    },
+    "money_name" : "Euro"
+  },
+  "SDN" : {
+    "country_region" : "Africa",
+    "money_symbol" : "SDG",
+    "country_capital" : "Khartoum",
+    "country_name" : "Sudan",
+    "money_code" : "SDG",
+    "country_languages" : {
+      "ara" : "Arabic",
+      "eng" : "English"
+    },
+    "money_name" : "Sudanese Pound"
+  },
+  "KOR" : {
+    "country_region" : "Asia",
+    "money_symbol" : "₩",
+    "country_capital" : "Seoul",
+    "country_name" : "South Korea",
+    "money_code" : "KRW",
+    "country_languages" : {
+      "kor" : "Korean"
+    },
+    "money_name" : "South Korean Won"
+  },
+  "HRV" : {
+    "country_region" : "Europe",
+    "money_symbol" : "kn",
+    "country_capital" : "Zagreb",
+    "country_name" : "Croatia",
+    "money_code" : "HRK",
+    "country_languages" : {
+      "hrv" : "Croatian"
+    },
+    "money_name" : "Croatian Kuna"
+  },
+  "ISR" : {
+    "country_region" : "Asia",
+    "money_symbol" : "₪",
+    "country_capital" : "Jerusalem",
+    "country_name" : "Israel",
+    "money_code" : "ILS",
+    "country_languages" : {
+      "ara" : "Arabic",
+      "heb" : "Hebrew"
+    },
+    "money_name" : "Israeli New Sheqel"
+  },
+  "VGB" : {
+    "country_region" : "Americas",
+    "money_symbol" : "$",
+    "country_capital" : "Road Town",
+    "country_name" : "British Virgin Islands",
+    "money_code" : "USD",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "US Dollar"
+  },
+  "NIU" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "NZ$",
+    "country_capital" : "Alofi",
+    "country_name" : "Niue",
+    "money_code" : "NZD",
+    "country_languages" : {
+      "eng" : "English",
+      "niu" : "Niuean"
+    },
+    "money_name" : "New Zealand Dollar"
+  },
+  "SEN" : {
+    "country_region" : "Africa",
+    "money_symbol" : "CFA",
+    "country_capital" : "Dakar",
+    "country_name" : "Senegal",
+    "money_code" : "XOF",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "CFA Franc BCEAO"
+  },
+  "SAU" : {
+    "country_region" : "Asia",
+    "money_symbol" : "SR",
+    "country_capital" : "Riyadh",
+    "country_name" : "Saudi Arabia",
+    "money_code" : "SAR",
+    "country_languages" : {
+      "ara" : "Arabic"
+    },
+    "money_name" : "Saudi Riyal"
+  },
+  "MNP" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "$",
+    "country_capital" : "Saipan",
+    "country_name" : "Northern Mariana Islands",
+    "money_code" : "USD",
+    "country_languages" : {
+      "cal" : "Carolinian",
+      "cha" : "Chamorro",
+      "eng" : "English"
+    },
+    "money_name" : "US Dollar"
+  },
+  "MMR" : {
+    "country_region" : "Asia",
+    "money_symbol" : "MMK",
+    "country_capital" : "Naypyidaw",
+    "country_name" : "Myanmar",
+    "money_code" : "MMK",
+    "country_languages" : {
+      "mya" : "Burmese"
+    },
+    "money_name" : "Myanma Kyat"
+  },
+  "MLT" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Valletta",
+    "country_name" : "Malta",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "eng" : "English",
+      "mlt" : "Maltese"
+    },
+    "money_name" : "Euro"
+  },
+  "CHL" : {
+    "country_region" : "Americas",
+    "money_symbol" : "CL$",
+    "country_capital" : "Santiago",
+    "country_name" : "Chile",
+    "money_code" : "CLP",
+    "country_languages" : {
+      "spa" : "Spanish"
+    },
+    "money_name" : "Chilean Peso"
+  },
+  "GHA" : {
+    "country_region" : "Africa",
+    "money_symbol" : "GH₵",
+    "country_capital" : "Accra",
+    "country_name" : "Ghana",
+    "money_code" : "GHS",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "Ghanaian Cedi"
+  },
+  "OMN" : {
+    "country_region" : "Asia",
+    "money_symbol" : "OMR",
+    "country_capital" : "Muscat",
+    "country_name" : "Oman",
+    "money_code" : "OMR",
+    "country_languages" : {
+      "ara" : "Arabic"
+    },
+    "money_name" : "Omani Rial"
+  },
+  "NPL" : {
+    "country_region" : "Asia",
+    "money_symbol" : "NPRs",
+    "country_capital" : "Kathmandu",
+    "country_name" : "Nepal",
+    "money_code" : "NPR",
+    "country_languages" : {
+      "nep" : "Nepali"
+    },
+    "money_name" : "Nepalese Rupee"
+  },
+  "BGR" : {
+    "country_region" : "Europe",
+    "money_symbol" : "BGN",
+    "country_capital" : "Sofia",
+    "country_name" : "Bulgaria",
+    "money_code" : "BGN",
+    "country_languages" : {
+      "bul" : "Bulgarian"
+    },
+    "money_name" : "Bulgarian Lev"
+  },
+  "CHN" : {
+    "country_region" : "Asia",
+    "money_symbol" : "CN¥",
+    "country_capital" : "Beijing",
+    "country_name" : "China",
+    "money_code" : "CNY",
+    "country_languages" : {
+      "cmn" : "Mandarin"
+    },
+    "money_name" : "Chinese Yuan"
+  },
+  "BRA" : {
+    "country_region" : "Americas",
+    "money_symbol" : "R$",
+    "country_capital" : "Brasília",
+    "country_name" : "Brazil",
+    "money_code" : "BRL",
+    "country_languages" : {
+      "por" : "Portuguese"
+    },
+    "money_name" : "Brazilian Real"
+  },
+  "DJI" : {
+    "country_region" : "Africa",
+    "money_symbol" : "Fdj",
+    "country_capital" : "Djibouti",
+    "country_name" : "Djibouti",
+    "money_code" : "DJF",
+    "country_languages" : {
+      "ara" : "Arabic",
+      "fra" : "French"
+    },
+    "money_name" : "Djiboutian Franc"
+  },
+  "REU" : {
+    "country_region" : "Africa",
+    "money_symbol" : "€",
+    "country_capital" : "Saint-Denis",
+    "country_name" : "Réunion",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "Euro"
+  },
+  "BHR" : {
+    "country_region" : "Asia",
+    "money_symbol" : "BD",
+    "country_capital" : "Manama",
+    "country_name" : "Bahrain",
+    "money_code" : "BHD",
+    "country_languages" : {
+      "ara" : "Arabic"
+    },
+    "money_name" : "Bahraini Dinar"
+  },
+  "COD" : {
+    "country_region" : "Africa",
+    "money_symbol" : "CDF",
+    "country_capital" : "Kinshasa",
+    "country_name" : "DR Congo",
+    "money_code" : "CDF",
+    "country_languages" : {
+      "lin" : "Lingala",
+      "fra" : "French",
+      "kon" : "Kikongo",
+      "lua" : "Tshiluba",
+      "swa" : "Swahili"
+    },
+    "money_name" : "Congolese Franc"
+  },
+  "LSO" : {
+    "country_region" : "Africa",
+    "money_symbol" : "R",
+    "country_capital" : "Maseru",
+    "country_name" : "Lesotho",
+    "money_code" : "ZAR",
+    "country_languages" : {
+      "eng" : "English",
+      "sot" : "Sotho"
+    },
+    "money_name" : "South African Rand"
+  },
+  "ZAF" : {
+    "country_region" : "Africa",
+    "money_symbol" : "R",
+    "country_capital" : "Pretoria",
+    "country_name" : "South Africa",
+    "money_code" : "ZAR",
+    "country_languages" : {
+      "ssw" : "Swazi",
+      "eng" : "English",
+      "tsn" : "Tswana",
+      "sot" : "Southern Sotho",
+      "nso" : "Northern Sotho",
+      "afr" : "Afrikaans",
+      "xho" : "Xhosa",
+      "nbl" : "Southern Ndebele",
+      "ven" : "Venda",
+      "tso" : "Tsonga",
+      "zul" : "Zulu"
+    },
+    "money_name" : "South African Rand"
+  },
+  "ARE" : {
+    "country_region" : "Asia",
+    "money_symbol" : "AED",
+    "country_capital" : "Abu Dhabi",
+    "country_name" : "United Arab Emirates",
+    "money_code" : "AED",
+    "country_languages" : {
+      "ara" : "Arabic"
+    },
+    "money_name" : "United Arab Emirates Dirham"
+  },
+  "SGP" : {
+    "country_region" : "Asia",
+    "money_symbol" : "S$",
+    "country_capital" : "Singapore",
+    "country_name" : "Singapore",
+    "money_code" : "SGD",
+    "country_languages" : {
+      "eng" : "English",
+      "cmn" : "Mandarin",
+      "tam" : "Tamil",
+      "msa" : "Malay"
+    },
+    "money_name" : "Singapore Dollar"
+  },
+  "BLM" : {
+    "country_region" : "Americas",
+    "money_symbol" : "€",
+    "country_capital" : "Gustavia",
+    "country_name" : "Saint Barthélemy",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "Euro"
+  },
+  "PSE" : {
+    "country_region" : "Asia",
+    "money_symbol" : "₪",
+    "country_capital" : "Ramallah",
+    "country_name" : "Palestine",
+    "money_code" : "ILS",
+    "country_languages" : {
+      "ara" : "Arabic"
+    },
+    "money_name" : "Israeli New Sheqel"
+  },
+  "POL" : {
+    "country_region" : "Europe",
+    "money_symbol" : "zł",
+    "country_capital" : "Warsaw",
+    "country_name" : "Poland",
+    "money_code" : "PLN",
+    "country_languages" : {
+      "pol" : "Polish"
+    },
+    "money_name" : "Polish Zloty"
+  },
+  "NOR" : {
+    "country_region" : "Europe",
+    "money_symbol" : "Nkr",
+    "country_capital" : "Oslo",
+    "country_name" : "Norway",
+    "money_code" : "NOK",
+    "country_languages" : {
+      "nno" : "Norwegian Nynorsk",
+      "nob" : "Norwegian Bokmål",
+      "smi" : "Sami"
+    },
+    "money_name" : "Norwegian Krone"
+  },
+  "TGO" : {
+    "country_region" : "Africa",
+    "money_symbol" : "CFA",
+    "country_capital" : "Lomé",
+    "country_name" : "Togo",
+    "money_code" : "XOF",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "CFA Franc BCEAO"
+  },
+  "ARG" : {
+    "country_region" : "Americas",
+    "money_symbol" : "AR$",
+    "country_capital" : "Buenos Aires",
+    "country_name" : "Argentina",
+    "money_code" : "ARS",
+    "country_languages" : {
+      "grn" : "Guaraní",
+      "spa" : "Spanish"
+    },
+    "money_name" : "Argentine Peso"
+  },
+  "SJM" : {
+    "country_region" : "Europe",
+    "money_symbol" : "Nkr",
+    "country_capital" : "Longyearbyen",
+    "country_name" : "Svalbard and Jan Mayen",
+    "money_code" : "NOK",
+    "country_languages" : {
+      "nor" : "Norwegian"
+    },
+    "money_name" : "Norwegian Krone"
+  },
+  "ECU" : {
+    "country_region" : "Americas",
+    "money_symbol" : "$",
+    "country_capital" : "Quito",
+    "country_name" : "Ecuador",
+    "money_code" : "USD",
+    "country_languages" : {
+      "spa" : "Spanish"
+    },
+    "money_name" : "US Dollar"
+  },
+  "VAT" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Vatican City",
+    "country_name" : "Vatican City",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "ita" : "Italian",
+      "lat" : "Latin"
+    },
+    "money_name" : "Euro"
+  },
+  "COG" : {
+    "country_region" : "Africa",
+    "money_symbol" : "FCFA",
+    "country_capital" : "Brazzaville",
+    "country_name" : "Republic of the Congo",
+    "money_code" : "XAF",
+    "country_languages" : {
+      "fra" : "French",
+      "kon" : "Kikongo",
+      "lin" : "Lingala"
+    },
+    "money_name" : "CFA Franc BEAC"
+  },
+  "DEU" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Berlin",
+    "country_name" : "Germany",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "deu" : "German"
+    },
+    "money_name" : "Euro"
+  },
+  "MAC" : {
+    "country_region" : "Asia",
+    "money_symbol" : "MOP$",
+    "country_capital" : "",
+    "country_name" : "Macau",
+    "money_code" : "MOP",
+    "country_languages" : {
+      "por" : "Portuguese",
+      "zho" : "Chinese"
+    },
+    "money_name" : "Macanese Pataca"
+  },
+  "GBR" : {
+    "country_region" : "Europe",
+    "money_symbol" : "£",
+    "country_capital" : "London",
+    "country_name" : "United Kingdom",
+    "money_code" : "GBP",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "British Pound Sterling"
+  },
+  "SGS" : {
+    "country_region" : "Americas",
+    "money_symbol" : "£",
+    "country_capital" : "King Edward Point",
+    "country_name" : "South Georgia",
+    "money_code" : "GBP",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "British Pound Sterling"
+  },
+  "VEN" : {
+    "country_region" : "Americas",
+    "money_symbol" : "Bs.F.",
+    "country_capital" : "Caracas",
+    "country_name" : "Venezuela",
+    "money_code" : "VEF",
+    "country_languages" : {
+      "spa" : "Spanish"
+    },
+    "money_name" : "Venezuelan Bolívar"
+  },
+  "PRI" : {
+    "country_region" : "Americas",
+    "money_symbol" : "$",
+    "country_capital" : "San Juan",
+    "country_name" : "Puerto Rico",
+    "money_code" : "USD",
+    "country_languages" : {
+      "eng" : "English",
+      "spa" : "Spanish"
+    },
+    "money_name" : "US Dollar"
+  },
+  "ATF" : {
+    "country_region" : "",
+    "money_symbol" : "€",
+    "country_capital" : "Port-aux-Français",
+    "country_name" : "French Southern and Antarctic Lands",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "Euro"
+  },
+  "SRB" : {
+    "country_region" : "Europe",
+    "money_symbol" : "din.",
+    "country_capital" : "Belgrade",
+    "country_name" : "Serbia",
+    "money_code" : "RSD",
+    "country_languages" : {
+      "srp" : "Serbian"
+    },
+    "money_name" : "Serbian Dinar"
+  },
+  "JAM" : {
+    "country_region" : "Americas",
+    "money_symbol" : "J$",
+    "country_capital" : "Kingston",
+    "country_name" : "Jamaica",
+    "money_code" : "JMD",
+    "country_languages" : {
+      "eng" : "English",
+      "jam" : "Jamaican Patois"
+    },
+    "money_name" : "Jamaican Dollar"
+  },
+  "GEO" : {
+    "country_region" : "Asia",
+    "money_symbol" : "GEL",
+    "country_capital" : "Tbilisi",
+    "country_name" : "Georgia",
+    "money_code" : "GEL",
+    "country_languages" : {
+      "kat" : "Georgian"
+    },
+    "money_name" : "Georgian Lari"
+  },
+  "TKL" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "NZ$",
+    "country_capital" : "Fakaofo",
+    "country_name" : "Tokelau",
+    "money_code" : "NZD",
+    "country_languages" : {
+      "eng" : "English",
+      "smo" : "Samoan",
+      "tkl" : "Tokelauan"
+    },
+    "money_name" : "New Zealand Dollar"
+  },
+  "BLR" : {
+    "country_region" : "Europe",
+    "money_symbol" : "BYR",
+    "country_capital" : "Minsk",
+    "country_name" : "Belarus",
+    "money_code" : "BYR",
+    "country_languages" : {
+      "bel" : "Belarusian",
+      "rus" : "Russian"
+    },
+    "money_name" : "Belarusian Ruble"
+  },
+  "MAF" : {
+    "country_region" : "Americas",
+    "money_symbol" : "€",
+    "country_capital" : "Marigot",
+    "country_name" : "Saint Martin",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "Euro"
+  },
+  "MDA" : {
+    "country_region" : "Europe",
+    "money_symbol" : "MDL",
+    "country_capital" : "Chișinău",
+    "country_name" : "Moldova",
+    "money_code" : "MDL",
+    "country_languages" : {
+      "ron" : "Moldavian"
+    },
+    "money_name" : "Moldovan Leu"
+  },
+  "MTQ" : {
+    "country_region" : "Americas",
+    "money_symbol" : "€",
+    "country_capital" : "Fort-de-France",
+    "country_name" : "Martinique",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "Euro"
+  },
+  "COK" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "NZ$",
+    "country_capital" : "Avarua",
+    "country_name" : "Cook Islands",
+    "money_code" : "NZD",
+    "country_languages" : {
+      "eng" : "English",
+      "rar" : "Cook Islands Māori"
+    },
+    "money_name" : "New Zealand Dollar"
+  },
+  "MOZ" : {
+    "country_region" : "Africa",
+    "money_symbol" : "MTn",
+    "country_capital" : "Maputo",
+    "country_name" : "Mozambique",
+    "money_code" : "MZN",
+    "country_languages" : {
+      "por" : "Portuguese"
+    },
+    "money_name" : "Mozambican Metical"
+  },
+  "GNB" : {
+    "country_region" : "Africa",
+    "money_symbol" : "CFA",
+    "country_capital" : "Bissau",
+    "country_name" : "Guinea-Bissau",
+    "money_code" : "XOF",
+    "country_languages" : {
+      "por" : "Portuguese"
+    },
+    "money_name" : "CFA Franc BCEAO"
+  },
+  "BWA" : {
+    "country_region" : "Africa",
+    "money_symbol" : "BWP",
+    "country_capital" : "Gaborone",
+    "country_name" : "Botswana",
+    "money_code" : "BWP",
+    "country_languages" : {
+      "eng" : "English",
+      "tsn" : "Tswana"
+    },
+    "money_name" : "Botswanan Pula"
+  },
+  "PLW" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "$",
+    "country_capital" : "Ngerulmud",
+    "country_name" : "Palau",
+    "money_code" : "USD",
+    "country_languages" : {
+      "eng" : "English",
+      "pau" : "Palauan"
+    },
+    "money_name" : "US Dollar"
+  },
+  "LTU" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Vilnius",
+    "country_name" : "Lithuania",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "lit" : "Lithuanian"
+    },
+    "money_name" : "Euro"
+  },
+  "COL" : {
+    "country_region" : "Americas",
+    "money_symbol" : "CO$",
+    "country_capital" : "Bogotá",
+    "country_name" : "Colombia",
+    "money_code" : "COP",
+    "country_languages" : {
+      "spa" : "Spanish"
+    },
+    "money_name" : "Colombian Peso"
+  },
+  "DNK" : {
+    "country_region" : "Europe",
+    "money_symbol" : "Dkr",
+    "country_capital" : "Copenhagen",
+    "country_name" : "Denmark",
+    "money_code" : "DKK",
+    "country_languages" : {
+      "dan" : "Danish"
+    },
+    "money_name" : "Danish Krone"
+  },
+  "CIV" : {
+    "country_region" : "Africa",
+    "money_symbol" : "CFA",
+    "country_capital" : "Yamoussoukro",
+    "country_name" : "Ivory Coast",
+    "money_code" : "XOF",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "CFA Franc BCEAO"
+  },
+  "FIN" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Helsinki",
+    "country_name" : "Finland",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "fin" : "Finnish",
+      "swe" : "Swedish"
+    },
+    "money_name" : "Euro"
+  },
+  "ARM" : {
+    "country_region" : "Asia",
+    "money_symbol" : "AMD",
+    "country_capital" : "Yerevan",
+    "country_name" : "Armenia",
+    "money_code" : "AMD",
+    "country_languages" : {
+      "hye" : "Armenian",
+      "rus" : "Russian"
+    },
+    "money_name" : "Armenian Dram"
+  },
+  "IDN" : {
+    "country_region" : "Asia",
+    "money_symbol" : "Rp",
+    "country_capital" : "Jakarta",
+    "country_name" : "Indonesia",
+    "money_code" : "IDR",
+    "country_languages" : {
+      "ind" : "Indonesian"
+    },
+    "money_name" : "Indonesian Rupiah"
+  },
+  "COM" : {
+    "country_region" : "Africa",
+    "money_symbol" : "CF",
+    "country_capital" : "Moroni",
+    "country_name" : "Comoros",
+    "money_code" : "KMF",
+    "country_languages" : {
+      "ara" : "Arabic",
+      "fra" : "French",
+      "zdj" : "Comorian"
+    },
+    "money_name" : "Comorian Franc"
+  },
+  "KWT" : {
+    "country_region" : "Asia",
+    "money_symbol" : "KD",
+    "country_capital" : "Kuwait City",
+    "country_name" : "Kuwait",
+    "money_code" : "KWD",
+    "country_languages" : {
+      "ara" : "Arabic"
+    },
+    "money_name" : "Kuwaiti Dinar"
+  },
+  "UMI" : {
+    "country_region" : "Americas",
+    "money_symbol" : "$",
+    "country_capital" : "",
+    "country_name" : "United States Minor Outlying Islands",
+    "money_code" : "USD",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "US Dollar"
+  },
+  "RWA" : {
+    "country_region" : "Africa",
+    "money_symbol" : "RWF",
+    "country_capital" : "Kigali",
+    "country_name" : "Rwanda",
+    "money_code" : "RWF",
+    "country_languages" : {
+      "eng" : "English",
+      "fra" : "French",
+      "kin" : "Kinyarwanda"
+    },
+    "money_name" : "Rwandan Franc"
+  },
+  "NRU" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "AU$",
+    "country_capital" : "Yaren",
+    "country_name" : "Nauru",
+    "money_code" : "AUD",
+    "country_languages" : {
+      "eng" : "English",
+      "nau" : "Nauru"
+    },
+    "money_name" : "Australian Dollar"
+  },
+  "CRI" : {
+    "country_region" : "Americas",
+    "money_symbol" : "₡",
+    "country_capital" : "San José",
+    "country_name" : "Costa Rica",
+    "money_code" : "CRC",
+    "country_languages" : {
+      "spa" : "Spanish"
+    },
+    "money_name" : "Costa Rican Colón"
+  },
+  "HKG" : {
+    "country_region" : "Asia",
+    "money_symbol" : "HK$",
+    "country_capital" : "City of Victoria",
+    "country_name" : "Hong Kong",
+    "money_code" : "HKD",
+    "country_languages" : {
+      "eng" : "English",
+      "zho" : "Chinese"
+    },
+    "money_name" : "Hong Kong Dollar"
+  },
+  "FRA" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Paris",
+    "country_name" : "France",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "Euro"
+  },
+  "MUS" : {
+    "country_region" : "Africa",
+    "money_symbol" : "MURs",
+    "country_capital" : "Port Louis",
+    "country_name" : "Mauritius",
+    "money_code" : "MUR",
+    "country_languages" : {
+      "eng" : "English",
+      "fra" : "French",
+      "mfe" : "Mauritian Creole"
+    },
+    "money_name" : "Mauritian Rupee"
+  },
+  "HMD" : {
+    "country_region" : "",
+    "money_symbol" : "AU$",
+    "country_capital" : "",
+    "country_name" : "Heard Island and McDonald Islands",
+    "money_code" : "AUD",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "Australian Dollar"
+  },
+  "CMR" : {
+    "country_region" : "Africa",
+    "money_symbol" : "FCFA",
+    "country_capital" : "Yaoundé",
+    "country_name" : "Cameroon",
+    "money_code" : "XAF",
+    "country_languages" : {
+      "eng" : "English",
+      "fra" : "French"
+    },
+    "money_name" : "CFA Franc BEAC"
+  },
+  "ASM" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "$",
+    "country_capital" : "Pago Pago",
+    "country_name" : "American Samoa",
+    "money_code" : "USD",
+    "country_languages" : {
+      "eng" : "English",
+      "smo" : "Samoan"
+    },
+    "money_name" : "US Dollar"
+  },
+  "SOM" : {
+    "country_region" : "Africa",
+    "money_symbol" : "Ssh",
+    "country_capital" : "Mogadishu",
+    "country_name" : "Somalia",
+    "money_code" : "SOS",
+    "country_languages" : {
+      "ara" : "Arabic",
+      "som" : "Somali"
+    },
+    "money_name" : "Somali Shilling"
+  },
+  "YEM" : {
+    "country_region" : "Asia",
+    "money_symbol" : "YR",
+    "country_capital" : "Sana'a",
+    "country_name" : "Yemen",
+    "money_code" : "YER",
+    "country_languages" : {
+      "ara" : "Arabic"
+    },
+    "money_name" : "Yemeni Rial"
+  },
+  "GIN" : {
+    "country_region" : "Africa",
+    "money_symbol" : "FG",
+    "country_capital" : "Conakry",
+    "country_name" : "Guinea",
+    "money_code" : "GNF",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "Guinean Franc"
+  },
+  "DOM" : {
+    "country_region" : "Americas",
+    "money_symbol" : "RD$",
+    "country_capital" : "Santo Domingo",
+    "country_name" : "Dominican Republic",
+    "money_code" : "DOP",
+    "country_languages" : {
+      "spa" : "Spanish"
+    },
+    "money_name" : "Dominican Peso"
+  },
+  "HND" : {
+    "country_region" : "Americas",
+    "money_symbol" : "HNL",
+    "country_capital" : "Tegucigalpa",
+    "country_name" : "Honduras",
+    "money_code" : "HNL",
+    "country_languages" : {
+      "spa" : "Spanish"
+    },
+    "money_name" : "Honduran Lempira"
+  },
+  "BRN" : {
+    "country_region" : "Asia",
+    "money_symbol" : "BN$",
+    "country_capital" : "Bandar Seri Begawan",
+    "country_name" : "Brunei",
+    "money_code" : "BND",
+    "country_languages" : {
+      "msa" : "Malay"
+    },
+    "money_name" : "Brunei Dollar"
+  },
+  "LUX" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Luxembourg",
+    "country_name" : "Luxembourg",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "deu" : "German",
+      "fra" : "French",
+      "ltz" : "Luxembourgish"
+    },
+    "money_name" : "Euro"
+  },
+  "SPM" : {
+    "country_region" : "Americas",
+    "money_symbol" : "€",
+    "country_capital" : "Saint-Pierre",
+    "country_name" : "Saint Pierre and Miquelon",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "Euro"
+  },
+  "MDG" : {
+    "country_region" : "Africa",
+    "money_symbol" : "MGA",
+    "country_capital" : "Antananarivo",
+    "country_name" : "Madagascar",
+    "money_code" : "MGA",
+    "country_languages" : {
+      "fra" : "French",
+      "mlg" : "Malagasy"
+    },
+    "money_name" : "Malagasy Ariary"
+  },
+  "UNK" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Pristina",
+    "country_name" : "Kosovo",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "sqi" : "Albanian",
+      "srp" : "Serbian"
+    },
+    "money_name" : "Euro"
+  },
+  "SMR" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "City of San Marino",
+    "country_name" : "San Marino",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "ita" : "Italian"
+    },
+    "money_name" : "Euro"
+  },
+  "EGY" : {
+    "country_region" : "Africa",
+    "money_symbol" : "EGP",
+    "country_capital" : "Cairo",
+    "country_name" : "Egypt",
+    "money_code" : "EGP",
+    "country_languages" : {
+      "ara" : "Arabic"
+    },
+    "money_name" : "Egyptian Pound"
+  },
+  "LBN" : {
+    "country_region" : "Asia",
+    "money_symbol" : "LB£",
+    "country_capital" : "Beirut",
+    "country_name" : "Lebanon",
+    "money_code" : "LBP",
+    "country_languages" : {
+      "ara" : "Arabic",
+      "fra" : "French"
+    },
+    "money_name" : "Lebanese Pound"
+  },
+  "AZE" : {
+    "country_region" : "Asia",
+    "money_symbol" : "man.",
+    "country_capital" : "Baku",
+    "country_name" : "Azerbaijan",
+    "money_code" : "AZN",
+    "country_languages" : {
+      "aze" : "Azerbaijani",
+      "rus" : "Russian"
+    },
+    "money_name" : "Azerbaijani Manat"
+  },
+  "BLZ" : {
+    "country_region" : "Americas",
+    "money_symbol" : "BZ$",
+    "country_capital" : "Belmopan",
+    "country_name" : "Belize",
+    "money_code" : "BZD",
+    "country_languages" : {
+      "bjz" : "Belizean Creole",
+      "eng" : "English",
+      "spa" : "Spanish"
+    },
+    "money_name" : "Belize Dollar"
+  },
+  "NGA" : {
+    "country_region" : "Africa",
+    "money_symbol" : "₦",
+    "country_capital" : "Abuja",
+    "country_name" : "Nigeria",
+    "money_code" : "NGN",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "Nigerian Naira"
+  },
+  "NZL" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "NZ$",
+    "country_capital" : "Wellington",
+    "country_name" : "New Zealand",
+    "money_code" : "NZD",
+    "country_languages" : {
+      "eng" : "English",
+      "mri" : "Māori",
+      "nzs" : "New Zealand Sign Language"
+    },
+    "money_name" : "New Zealand Dollar"
+  },
+  "PRT" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Lisbon",
+    "country_name" : "Portugal",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "por" : "Portuguese"
+    },
+    "money_name" : "Euro"
+  },
+  "TON" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "T$",
+    "country_capital" : "Nuku'alofa",
+    "country_name" : "Tonga",
+    "money_code" : "TOP",
+    "country_languages" : {
+      "eng" : "English",
+      "ton" : "Tongan"
+    },
+    "money_name" : "Tongan Paʻanga"
+  },
+  "UKR" : {
+    "country_region" : "Europe",
+    "money_symbol" : "₴",
+    "country_capital" : "Kiev",
+    "country_name" : "Ukraine",
+    "money_code" : "UAH",
+    "country_languages" : {
+      "rus" : "Russian",
+      "ukr" : "Ukrainian"
+    },
+    "money_name" : "Ukrainian Hryvnia"
+  },
+  "SLV" : {
+    "country_region" : "Americas",
+    "money_symbol" : "$",
+    "country_capital" : "San Salvador",
+    "country_name" : "El Salvador",
+    "money_code" : "USD",
+    "country_languages" : {
+      "spa" : "Spanish"
+    },
+    "money_name" : "US Dollar"
+  },
+  "TLS" : {
+    "country_region" : "Asia",
+    "money_symbol" : "$",
+    "country_capital" : "Dili",
+    "country_name" : "Timor-Leste",
+    "money_code" : "USD",
+    "country_languages" : {
+      "por" : "Portuguese",
+      "tet" : "Tetum"
+    },
+    "money_name" : "US Dollar"
+  },
+  "GRC" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Athens",
+    "country_name" : "Greece",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "ell" : "Greek"
+    },
+    "money_name" : "Euro"
+  },
+  "VIR" : {
+    "country_region" : "Americas",
+    "money_symbol" : "$",
+    "country_capital" : "Charlotte Amalie",
+    "country_name" : "United States Virgin Islands",
+    "money_code" : "USD",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "US Dollar"
+  },
+  "LKA" : {
+    "country_region" : "Asia",
+    "money_symbol" : "SLRs",
+    "country_capital" : "Colombo",
+    "country_name" : "Sri Lanka",
+    "money_code" : "LKR",
+    "country_languages" : {
+      "sin" : "Sinhala",
+      "tam" : "Tamil"
+    },
+    "money_name" : "Sri Lankan Rupee"
+  },
+  "IND" : {
+    "country_region" : "Asia",
+    "money_symbol" : "Rs",
+    "country_capital" : "New Delhi",
+    "country_name" : "India",
+    "money_code" : "INR",
+    "country_languages" : {
+      "eng" : "English",
+      "hin" : "Hindi",
+      "tam" : "Tamil"
+    },
+    "money_name" : "Indian Rupee"
+  },
+  "ERI" : {
+    "country_region" : "Africa",
+    "money_symbol" : "Nfk",
+    "country_capital" : "Asmara",
+    "country_name" : "Eritrea",
+    "money_code" : "ERN",
+    "country_languages" : {
+      "ara" : "Arabic",
+      "eng" : "English",
+      "tir" : "Tigrinya"
+    },
+    "money_name" : "Eritrean Nakfa"
+  },
+  "KEN" : {
+    "country_region" : "Africa",
+    "money_symbol" : "Ksh",
+    "country_capital" : "Nairobi",
+    "country_name" : "Kenya",
+    "money_code" : "KES",
+    "country_languages" : {
+      "eng" : "English",
+      "swa" : "Swahili"
+    },
+    "money_name" : "Kenyan Shilling"
+  },
+  "BTN" : {
+    "country_region" : "Asia",
+    "money_symbol" : "Rs",
+    "country_capital" : "Thimphu",
+    "country_name" : "Bhutan",
+    "money_code" : "INR",
+    "country_languages" : {
+      "dzo" : "Dzongkha"
+    },
+    "money_name" : "Indian Rupee"
+  },
+  "LIE" : {
+    "country_region" : "Europe",
+    "money_symbol" : "CHF",
+    "country_capital" : "Vaduz",
+    "country_name" : "Liechtenstein",
+    "money_code" : "CHF",
+    "country_languages" : {
+      "deu" : "German"
+    },
+    "money_name" : "Swiss Franc"
+  },
+  "ROU" : {
+    "country_region" : "Europe",
+    "money_symbol" : "RON",
+    "country_capital" : "Bucharest",
+    "country_name" : "Romania",
+    "money_code" : "RON",
+    "country_languages" : {
+      "ron" : "Romanian"
+    },
+    "money_name" : "Romanian Leu"
+  },
+  "SWE" : {
+    "country_region" : "Europe",
+    "money_symbol" : "Skr",
+    "country_capital" : "Stockholm",
+    "country_name" : "Sweden",
+    "money_code" : "SEK",
+    "country_languages" : {
+      "swe" : "Swedish"
+    },
+    "money_name" : "Swedish Krona"
+  },
+  "NAM" : {
+    "country_region" : "Africa",
+    "money_symbol" : "R",
+    "country_capital" : "Windhoek",
+    "country_name" : "Namibia",
+    "money_code" : "ZAR",
+    "country_languages" : {
+      "tsn" : "Tswana",
+      "eng" : "English",
+      "her" : "Herero",
+      "deu" : "German",
+      "afr" : "Afrikaans",
+      "hgm" : "Khoekhoe",
+      "ndo" : "Ndonga",
+      "kwn" : "Kwangali",
+      "loz" : "Lozi"
+    },
+    "money_name" : "South African Rand"
+  },
+  "MYS" : {
+    "country_region" : "Asia",
+    "money_symbol" : "RM",
+    "country_capital" : "Kuala Lumpur",
+    "country_name" : "Malaysia",
+    "money_code" : "MYR",
+    "country_languages" : {
+      "eng" : "English",
+      "msa" : "Malay"
+    },
+    "money_name" : "Malaysian Ringgit"
+  },
+  "VNM" : {
+    "country_region" : "Asia",
+    "money_symbol" : "₫",
+    "country_capital" : "Hanoi",
+    "country_name" : "Vietnam",
+    "money_code" : "VND",
+    "country_languages" : {
+      "vie" : "Vietnamese"
+    },
+    "money_name" : "Vietnamese Dong"
+  },
+  "MYT" : {
+    "country_region" : "Africa",
+    "money_symbol" : "€",
+    "country_capital" : "Mamoudzou",
+    "country_name" : "Mayotte",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "Euro"
+  },
+  "ETH" : {
+    "country_region" : "Africa",
+    "money_symbol" : "Br",
+    "country_capital" : "Addis Ababa",
+    "country_name" : "Ethiopia",
+    "money_code" : "ETB",
+    "country_languages" : {
+      "amh" : "Amharic"
+    },
+    "money_name" : "Ethiopian Birr"
+  },
+  "GLP" : {
+    "country_region" : "Americas",
+    "money_symbol" : "€",
+    "country_capital" : "Basse-Terre",
+    "country_name" : "Guadeloupe",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "Euro"
+  },
+  "DZA" : {
+    "country_region" : "Africa",
+    "money_symbol" : "DA",
+    "country_capital" : "Algiers",
+    "country_name" : "Algeria",
+    "money_code" : "DZD",
+    "country_languages" : {
+      "ara" : "Arabic"
+    },
+    "money_name" : "Algerian Dinar"
+  },
+  "MAR" : {
+    "country_region" : "Africa",
+    "money_symbol" : "MAD",
+    "country_capital" : "Rabat",
+    "country_name" : "Morocco",
+    "money_code" : "MAD",
+    "country_languages" : {
+      "ara" : "Arabic",
+      "ber" : "Berber"
+    },
+    "money_name" : "Moroccan Dirham"
+  },
+  "GGY" : {
+    "country_region" : "Europe",
+    "money_symbol" : "£",
+    "country_capital" : "St. Peter Port",
+    "country_name" : "Guernsey",
+    "money_code" : "GBP",
+    "country_languages" : {
+      "eng" : "English",
+      "fra" : "French",
+      "nfr" : "Guernésiais"
+    },
+    "money_name" : "British Pound Sterling"
+  },
+  "MCO" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Monaco",
+    "country_name" : "Monaco",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "Euro"
+  },
+  "CZE" : {
+    "country_region" : "Europe",
+    "money_symbol" : "Kč",
+    "country_capital" : "Prague",
+    "country_name" : "Czech Republic",
+    "money_code" : "CZK",
+    "country_languages" : {
+      "ces" : "Czech",
+      "slk" : "Slovak"
+    },
+    "money_name" : "Czech Republic Koruna"
+  },
+  "AUS" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "AU$",
+    "country_capital" : "Canberra",
+    "country_name" : "Australia",
+    "money_code" : "AUD",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "Australian Dollar"
+  },
+  "NIC" : {
+    "country_region" : "Americas",
+    "money_symbol" : "C$",
+    "country_capital" : "Managua",
+    "country_name" : "Nicaragua",
+    "money_code" : "NIO",
+    "country_languages" : {
+      "spa" : "Spanish"
+    },
+    "money_name" : "Nicaraguan Córdoba"
+  },
+  "CPV" : {
+    "country_region" : "Africa",
+    "money_symbol" : "CV$",
+    "country_capital" : "Praia",
+    "country_name" : "Cape Verde",
+    "money_code" : "CVE",
+    "country_languages" : {
+      "por" : "Portuguese"
+    },
+    "money_name" : "Cape Verdean Escudo"
+  },
+  "PAK" : {
+    "country_region" : "Asia",
+    "money_symbol" : "PKRs",
+    "country_capital" : "Islamabad",
+    "country_name" : "Pakistan",
+    "money_code" : "PKR",
+    "country_languages" : {
+      "eng" : "English",
+      "urd" : "Urdu"
+    },
+    "money_name" : "Pakistani Rupee"
+  },
+  "KHM" : {
+    "country_region" : "Asia",
+    "money_symbol" : "KHR",
+    "country_capital" : "Phnom Penh",
+    "country_name" : "Cambodia",
+    "money_code" : "KHR",
+    "country_languages" : {
+      "khm" : "Khmer"
+    },
+    "money_name" : "Cambodian Riel"
+  },
+  "PRY" : {
+    "country_region" : "Americas",
+    "money_symbol" : "₲",
+    "country_capital" : "Asunción",
+    "country_name" : "Paraguay",
+    "money_code" : "PYG",
+    "country_languages" : {
+      "grn" : "Guaraní",
+      "spa" : "Spanish"
+    },
+    "money_name" : "Paraguayan Guarani"
+  },
+  "TZA" : {
+    "country_region" : "Africa",
+    "money_symbol" : "TSh",
+    "country_capital" : "Dodoma",
+    "country_name" : "Tanzania",
+    "money_code" : "TZS",
+    "country_languages" : {
+      "eng" : "English",
+      "swa" : "Swahili"
+    },
+    "money_name" : "Tanzanian Shilling"
+  },
+  "AUT" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Vienna",
+    "country_name" : "Austria",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "bar" : "Austro-Bavarian German"
+    },
+    "money_name" : "Euro"
+  },
+  "SVK" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Bratislava",
+    "country_name" : "Slovakia",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "slk" : "Slovak"
+    },
+    "money_name" : "Euro"
+  },
+  "KAZ" : {
+    "country_region" : "Asia",
+    "money_symbol" : "KZT",
+    "country_capital" : "Astana",
+    "country_name" : "Kazakhstan",
+    "money_code" : "KZT",
+    "country_languages" : {
+      "kaz" : "Kazakh",
+      "rus" : "Russian"
+    },
+    "money_name" : "Kazakhstani Tenge"
+  },
+  "MKD" : {
+    "country_region" : "Europe",
+    "money_symbol" : "MKD",
+    "country_capital" : "Skopje",
+    "country_name" : "Macedonia",
+    "money_code" : "MKD",
+    "country_languages" : {
+      "mkd" : "Macedonian"
+    },
+    "money_name" : "Macedonian Denar"
+  },
+  "CAF" : {
+    "country_region" : "Africa",
+    "money_symbol" : "FCFA",
+    "country_capital" : "Bangui",
+    "country_name" : "Central African Republic",
+    "money_code" : "XAF",
+    "country_languages" : {
+      "fra" : "French",
+      "sag" : "Sango"
+    },
+    "money_name" : "CFA Franc BEAC"
+  },
+  "BFA" : {
+    "country_region" : "Africa",
+    "money_symbol" : "CFA",
+    "country_capital" : "Ouagadougou",
+    "country_name" : "Burkina Faso",
+    "money_code" : "XOF",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "CFA Franc BCEAO"
+  },
+  "ITA" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Rome",
+    "country_name" : "Italy",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "bar" : "Austro-Bavarian German",
+      "ita" : "Italian",
+      "srd" : "Sardinian"
+    },
+    "money_name" : "Euro"
+  },
+  "GNQ" : {
+    "country_region" : "Africa",
+    "money_symbol" : "FCFA",
+    "country_capital" : "Malabo",
+    "country_name" : "Equatorial Guinea",
+    "money_code" : "XAF",
+    "country_languages" : {
+      "fra" : "French",
+      "por" : "Portuguese",
+      "spa" : "Spanish"
+    },
+    "money_name" : "CFA Franc BEAC"
+  },
+  "NFK" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "AU$",
+    "country_capital" : "Kingston",
+    "country_name" : "Norfolk Island",
+    "money_code" : "AUD",
+    "country_languages" : {
+      "eng" : "English",
+      "pih" : "Norfuk"
+    },
+    "money_name" : "Australian Dollar"
+  },
+  "PAN" : {
+    "country_region" : "Americas",
+    "money_symbol" : "$",
+    "country_capital" : "Panama City",
+    "country_name" : "Panama",
+    "money_code" : "USD",
+    "country_languages" : {
+      "spa" : "Spanish"
+    },
+    "money_name" : "US Dollar"
+  },
+  "GUF" : {
+    "country_region" : "Americas",
+    "money_symbol" : "€",
+    "country_capital" : "Cayenne",
+    "country_name" : "French Guiana",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "fra" : "French"
+    },
+    "money_name" : "Euro"
+  },
+  "IMN" : {
+    "country_region" : "Europe",
+    "money_symbol" : "£",
+    "country_capital" : "Douglas",
+    "country_name" : "Isle of Man",
+    "money_code" : "GBP",
+    "country_languages" : {
+      "eng" : "English",
+      "glv" : "Manx"
+    },
+    "money_name" : "British Pound Sterling"
+  },
+  "SVN" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Ljubljana",
+    "country_name" : "Slovenia",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "slv" : "Slovene"
+    },
+    "money_name" : "Euro"
+  },
+  "UZB" : {
+    "country_region" : "Asia",
+    "money_symbol" : "UZS",
+    "country_capital" : "Tashkent",
+    "country_name" : "Uzbekistan",
+    "money_code" : "UZS",
+    "country_languages" : {
+      "rus" : "Russian",
+      "uzb" : "Uzbek"
+    },
+    "money_name" : "Uzbekistan Som"
+  },
+  "JEY" : {
+    "country_region" : "Europe",
+    "money_symbol" : "£",
+    "country_capital" : "Saint Helier",
+    "country_name" : "Jersey",
+    "money_code" : "GBP",
+    "country_languages" : {
+      "eng" : "English",
+      "fra" : "French",
+      "nrf" : "Jèrriais"
+    },
+    "money_name" : "British Pound Sterling"
+  },
+  "TTO" : {
+    "country_region" : "Americas",
+    "money_symbol" : "TT$",
+    "country_capital" : "Port of Spain",
+    "country_name" : "Trinidad and Tobago",
+    "money_code" : "TTD",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "Trinidad and Tobago Dollar"
+  },
+  "GRL" : {
+    "country_region" : "Americas",
+    "money_symbol" : "Dkr",
+    "country_capital" : "Nuuk",
+    "country_name" : "Greenland",
+    "money_code" : "DKK",
+    "country_languages" : {
+      "kal" : "Greenlandic"
+    },
+    "money_name" : "Danish Krone"
+  },
+  "ESP" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Madrid",
+    "country_name" : "Spain",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "cat" : "Catalan",
+      "spa" : "Spanish",
+      "oci" : "Occitan",
+      "eus" : "Basque",
+      "glg" : "Galician"
+    },
+    "money_name" : "Euro"
+  },
+  "FRO" : {
+    "country_region" : "Europe",
+    "money_symbol" : "Dkr",
+    "country_capital" : "Tórshavn",
+    "country_name" : "Faroe Islands",
+    "money_code" : "DKK",
+    "country_languages" : {
+      "dan" : "Danish",
+      "fao" : "Faroese"
+    },
+    "money_name" : "Danish Krone"
+  },
+  "RUS" : {
+    "country_region" : "Europe",
+    "money_symbol" : "RUB",
+    "country_capital" : "Moscow",
+    "country_name" : "Russia",
+    "money_code" : "RUB",
+    "country_languages" : {
+      "rus" : "Russian"
+    },
+    "money_name" : "Russian Ruble"
+  },
+  "LBY" : {
+    "country_region" : "Africa",
+    "money_symbol" : "LD",
+    "country_capital" : "Tripoli",
+    "country_name" : "Libya",
+    "money_code" : "LYD",
+    "country_languages" : {
+      "ara" : "Arabic"
+    },
+    "money_name" : "Libyan Dinar"
+  },
+  "TUN" : {
+    "country_region" : "Africa",
+    "money_symbol" : "DT",
+    "country_capital" : "Tunis",
+    "country_name" : "Tunisia",
+    "money_code" : "TND",
+    "country_languages" : {
+      "ara" : "Arabic"
+    },
+    "money_name" : "Tunisian Dinar"
+  },
+  "FSM" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "$",
+    "country_capital" : "Palikir",
+    "country_name" : "Micronesia",
+    "money_code" : "USD",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "US Dollar"
+  },
+  "BVT" : {
+    "country_region" : "",
+    "money_symbol" : "Nkr",
+    "country_capital" : "",
+    "country_name" : "Bouvet Island",
+    "money_code" : "NOK",
+    "country_languages" : {
+      "nor" : "Norwegian"
+    },
+    "money_name" : "Norwegian Krone"
+  },
+  "AFG" : {
+    "country_region" : "Asia",
+    "money_symbol" : "Af",
+    "country_capital" : "Kabul",
+    "country_name" : "Afghanistan",
+    "money_code" : "AFN",
+    "country_languages" : {
+      "prs" : "Dari",
+      "pus" : "Pashto",
+      "tuk" : "Turkmen"
+    },
+    "money_name" : "Afghan Afghani"
+  },
+  "MHL" : {
+    "country_region" : "Oceania",
+    "money_symbol" : "$",
+    "country_capital" : "Majuro",
+    "country_name" : "Marshall Islands",
+    "money_code" : "USD",
+    "country_languages" : {
+      "eng" : "English",
+      "mah" : "Marshallese"
+    },
+    "money_name" : "US Dollar"
+  },
+  "TCA" : {
+    "country_region" : "Americas",
+    "money_symbol" : "$",
+    "country_capital" : "Cockburn Town",
+    "country_name" : "Turks and Caicos Islands",
+    "money_code" : "USD",
+    "country_languages" : {
+      "eng" : "English"
+    },
+    "money_name" : "US Dollar"
+  },
+  "NLD" : {
+    "country_region" : "Europe",
+    "money_symbol" : "€",
+    "country_capital" : "Amsterdam",
+    "country_name" : "Netherlands",
+    "money_code" : "EUR",
+    "country_languages" : {
+      "nld" : "Dutch"
+    },
+    "money_name" : "Euro"
+  }
+}
