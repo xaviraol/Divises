@@ -100,9 +100,6 @@
                                                  NSFontAttributeName:[UIFont fontWithName:@"Avenir" size:_textCellsFontSize]} forState:UIControlStateNormal];
     [_segmentedControl setTitleTextAttributes: @{NSForegroundColorAttributeName:UIColorFromRGB(0xFF4543),
                                                  NSFontAttributeName:[UIFont fontWithName:@"Avenir" size:_textCellsFontSize]} forState:UIControlStateSelected];
-    //[_segmentedControl setContentOffset:CGSizeMake(-11, 0) forSegmentAtIndex:0];
-    //[_segmentedControl setContentOffset:CGSizeMake(15, 0) forSegmentAtIndex:2];
-
 
     //--------------------------------------------------------------
     
@@ -268,6 +265,9 @@
     static NSString *CellIdentifier = @"addCurrencyCell";
     AddCurrencyCell *cell = [_currenciesTableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     NSDictionary *currency = [NSDictionary new];
+    if (cell == nil){
+    cell = [[AddCurrencyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
+    }
     cell.accessoryType = UITableViewCellAccessoryNone;
     [cell.labelName setFont:[UIFont fontWithName:@"Avenir-Heavy" size:_textCellsFontSize]];
     if (_searchBarActive) {

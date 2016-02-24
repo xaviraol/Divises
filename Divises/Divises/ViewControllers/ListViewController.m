@@ -16,7 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
-//constraints and font-sizes for screens
+//constraints and font sizes for different screen sizes.
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *mainCurrencyViewHeight;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *topMainValue;
 
@@ -24,6 +24,8 @@
 @property (nonatomic) int moneyValueMainFontSize;
 @property (nonatomic) int moneyValueOthersFontSize;
 
+
+//uitableview.
 @property (nonatomic, weak) IBOutlet UITableView *currenciesTableView;
 @property (nonatomic, strong) NSMutableArray *activeCurrencies;
 @property (nonatomic, strong) NSMutableArray *secondaryCurrencies;
@@ -36,23 +38,21 @@
 
 @property (nonatomic, strong) NSNumberFormatter *numberFormatter;
 
-@property (nonatomic) double valorInput;
-@property (nonatomic, strong) NSString *valorInputString;
+@property (nonatomic) double valueInput;
+@property (nonatomic, strong) NSString *valueInputString;
 
 -(IBAction)addCurrencyAction;
 -(IBAction)toInfoAction:(id)sender;
 
-
-@property (nonatomic) BOOL cellSelected;
-@property (nonatomic) BOOL scrolling;
 @end
 
 @implementation ListViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     [self screenConfiguration];
-
+    
     // NavigationBar appearance
     //-------------------------------------------------------------
     _navigationBar.translucent = NO;
@@ -62,8 +62,8 @@
      @{NSForegroundColorAttributeName:[UIColor blackColor],
        NSFontAttributeName:[UIFont fontWithName:@"Avenir-Heavy" size:21]}];
     //-------------------------------------------------------------
-
-    _valorInputString = @"";
+    
+    _valueInputString = @"";
     
     _activeCurrencies = [NSMutableArray new];
     _secondaryCurrencies = [NSMutableArray new];
@@ -72,21 +72,21 @@
     _activeCurrencies = [NSMutableArray arrayWithArray:active];
     _mainCurrency = [[NSUserDefaults standardUserDefaults] objectForKey:@"mainCurrency"];
     
-//    if (_mainCurrency == nil){
-//        _mainCurrency = _activeCurrencies[0];
-//        [[NSUserDefaults standardUserDefaults]setValue:_mainCurrency forKey:@"mainCurrency"];
-//    }else{
-//        BOOL hihamain= NO;
-//        for (NSDictionary *dict in _activeCurrencies) {
-//            if ([dict isEqualToDictionary:_mainCurrency]) {
-//                hihamain= YES;
-//            }
-//        }
-//        if (!hihamain) {
-//            _mainCurrency = _activeCurrencies[0];
-//            [[NSUserDefaults standardUserDefaults]setValue:_mainCurrency forKey:@"mainCurrency"];
-//        }
-//    }
+    //    if (_mainCurrency == nil){
+    //        _mainCurrency = _activeCurrencies[0];
+    //        [[NSUserDefaults standardUserDefaults]setValue:_mainCurrency forKey:@"mainCurrency"];
+    //    }else{
+    //        BOOL hihamain= NO;
+    //        for (NSDictionary *dict in _activeCurrencies) {
+    //            if ([dict isEqualToDictionary:_mainCurrency]) {
+    //                hihamain= YES;
+    //            }
+    //        }
+    //        if (!hihamain) {
+    //            _mainCurrency = _activeCurrencies[0];
+    //            [[NSUserDefaults standardUserDefaults]setValue:_mainCurrency forKey:@"mainCurrency"];
+    //        }
+    //    }
     _secondaryCurrencies = [NSMutableArray arrayWithArray:_activeCurrencies];
     [_secondaryCurrencies removeObject:_mainCurrency];
     
@@ -114,15 +114,15 @@
     
     NSNumber *valorInicial = [NSNumber numberWithInt:1];
     _valueTextField.text = [NSString stringWithFormat:@"%@ %@",valorInicial, [_mainCurrency objectForKey:@"money_symbol"]];
-    _valorInput = [valorInicial doubleValue];
+    _valueInput = [valorInicial doubleValue];
     
     _numberFormatter = [[NSNumberFormatter alloc]init];
     [_numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
     _numberFormatter.usesGroupingSeparator = YES;
     [_numberFormatter setMaximumFractionDigits:2];
     [_numberFormatter setMinimumFractionDigits:2];
-    [_numberFormatter setDecimalSeparator:@","];
-    [_numberFormatter setGroupingSeparator:@"."];
+    //    [_numberFormatter setDecimalSeparator:@","];
+    //    [_numberFormatter setGroupingSeparator:@"."];
     
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(_valueTextField.frame.size.width-5, 0, 5, 37)];
     _valueTextField.rightView = paddingView;
@@ -131,48 +131,57 @@
 
 -(void)doneClicked:(id)sender{
     [_valueTextField resignFirstResponder];
-
+    
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
-    NSNumber *elValor = [f numberFromString:_valorInputString];
-    _valorInput = [elValor doubleValue];
-    if (_valorInput == 0) {
+    NSNumber *elValor = [f numberFromString:_valueInputString];
+    _valueInput = [elValor doubleValue];
+    if (_valueInput == 0) {
         _valueTextField.text = [NSString stringWithFormat:@"0 %@",[_mainCurrency objectForKey:@"money_symbol"]];
     }
-
+    
     [UIView transitionWithView:_currenciesTableView
                       duration:0.7f
                        options:UIViewAnimationOptionTransitionCrossDissolve
                     animations:^(void) {
                         [_currenciesTableView reloadData];
                         [self setMainCurrencyView];
-                        _valorInputString = @"";
-
+                        _valueInputString = @"";
+                        
                     } completion:NULL];
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range     replacementString:(NSString *)string{
+    NSNumber *valueNumber;
+    NSString *valueString;
     
-    //NSLog(@"el Text: %@",string);
     if ([string isEqualToString:@""]) {
-        if (_valorInputString.length<1) {
+        if (_valueInputString.length<1) {
             _valueTextField.text = [_mainCurrency objectForKey:@"money_symbol"];
             return NO;
         }else{
-        NSString *newString = [_valorInputString substringToIndex:[_valorInputString length]-1];
-        _valorInputString = newString;
+            _valueInputString = [_valueInputString substringToIndex:[_valueInputString length]-1];
+            if (_valueInputString.length <1) {
+                valueString = [_numberFormatter stringFromNumber:[NSNumber numberWithDouble:0]];
+            }else{
+                valueNumber = [_numberFormatter numberFromString:_valueInputString];
+                valueString = [_numberFormatter stringFromNumber:valueNumber];
+            }
         }
     }else{
-    NSString *temp = [NSString stringWithFormat:@"%@%@",_valorInputString,string];
-    _valorInputString = temp;
+        _valueInputString = [NSString stringWithFormat:@"%@%@",_valueInputString,string];
+        valueNumber = [_numberFormatter numberFromString:_valueInputString];
+        valueString = [_numberFormatter stringFromNumber:valueNumber];
     }
     
-    _valueTextField.text = [NSString stringWithFormat:@"%@ %@",_valorInputString,[_mainCurrency objectForKey:@"money_symbol"]];
+    NSString *tot = [NSString stringWithFormat:@"%@ %@",valueString,[_mainCurrency objectForKey:@"money_symbol"]];
+    _valueTextField.text = tot;
+    
     return NO;
 }
 
 -(void)setMainCurrencyView{
-
+    
     NSString *moneyText = [NSString stringWithFormat:@"%@",[_mainCurrency objectForKey:@"money_name"]];
     [_moneyLabel setText: [moneyText uppercaseString]];
     [_moneyLabel setFont:[UIFont fontWithName:@"Avenir-Heavy" size:_moneyNamesFontSize]];
@@ -200,49 +209,51 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary *currency = [NSDictionary new];
-
-        static NSString *CellIdentifier = @"activeTableViewCell";
-        ActiveTableViewCell *cell = [_currenciesTableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-        currency = _secondaryCurrencies[indexPath.row];
+    static NSString *CellIdentifier = @"activeTableViewCell";
+    ActiveTableViewCell *cell = [_currenciesTableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-        double exchange = [self calculateChange:[NSNumber numberWithDouble:_valorInput] fromCurrentCurrency:[_mainCurrency objectForKey:@"money_code"] toMainCurrency:[currency objectForKey:@"money_code"]];
-        cell.valueLabel.text = [NSString stringWithFormat:@"%@ %@",[_numberFormatter stringFromNumber:[NSNumber numberWithDouble:exchange]],[currency objectForKey:@"money_symbol"]];
+    if (cell == nil) {
+        cell = [[ActiveTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
+    }
+    currency = _secondaryCurrencies[indexPath.row];
     
-        [cell.valueLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:_moneyValueOthersFontSize]];
-
-        NSString *moneyText = [NSString stringWithFormat:@"%@",[currency objectForKey:@"money_name"]];
-        [cell.moneyNameLabel setText: [moneyText uppercaseString]];
-        [cell.moneyNameLabel setFont:[UIFont fontWithName:@"Avenir-Heavy" size:_moneyNamesFontSize]];
-
-
-        double currentValue = [self calculateChange:[NSNumber numberWithInt:1] fromCurrentCurrency:[currency objectForKey:@"money_code"] toMainCurrency:[_mainCurrency objectForKey:@"money_code"]];
+    double exchange = [self calculateChange:[NSNumber numberWithDouble:_valueInput] fromCurrentCurrency:[_mainCurrency objectForKey:@"money_code"] toMainCurrency:[currency objectForKey:@"money_code"]];
+    cell.valueLabel.text = [NSString stringWithFormat:@"%@ %@",[_numberFormatter stringFromNumber:[NSNumber numberWithDouble:exchange]],[currency objectForKey:@"money_symbol"]];
+    
+    [cell.valueLabel setFont:[UIFont fontWithName:@"Avenir-Black" size:_moneyValueOthersFontSize]];
+    
+    NSString *moneyText = [NSString stringWithFormat:@"%@",[currency objectForKey:@"money_name"]];
+    [cell.moneyNameLabel setText: [moneyText uppercaseString]];
+    [cell.moneyNameLabel setFont:[UIFont fontWithName:@"Avenir-Heavy" size:_moneyNamesFontSize]];
+    
+    double currentValue = [self calculateChange:[NSNumber numberWithInt:1] fromCurrentCurrency:[currency objectForKey:@"money_code"] toMainCurrency:[_mainCurrency objectForKey:@"money_code"]];
     
     cell.currentValueLabel.text = [NSString stringWithFormat:@"1 %@ = %@ %@", [currency objectForKey:@"money_symbol"],[_numberFormatter stringFromNumber:[NSNumber numberWithDouble:currentValue]], [_mainCurrency objectForKey:@"money_symbol"]];
     
     [cell.currentValueLabel setFont:[UIFont fontWithName:@"Avenir-Medium" size:_moneyNamesFontSize]];
     
-        return cell;
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-        NSDictionary *tempMainCurrency = _secondaryCurrencies[indexPath.row];
-        [_secondaryCurrencies removeObject:tempMainCurrency];
-        [_secondaryCurrencies addObject:_mainCurrency];
-        _mainCurrency = tempMainCurrency;
-        [[NSUserDefaults standardUserDefaults]setValue:_mainCurrency forKey:@"mainCurrency"];
-        [[NSUserDefaults standardUserDefaults]setValue:_activeCurrencies forKey:@"activeCurrencies"];
-    _valorInput = 1;
-    _valorInputString = @"";
+    NSDictionary *tempMainCurrency = _secondaryCurrencies[indexPath.row];
+    [_secondaryCurrencies removeObject:tempMainCurrency];
+    [_secondaryCurrencies addObject:_mainCurrency];
+    _mainCurrency = tempMainCurrency;
+    [[NSUserDefaults standardUserDefaults]setValue:_mainCurrency forKey:@"mainCurrency"];
+    [[NSUserDefaults standardUserDefaults]setValue:_activeCurrencies forKey:@"activeCurrencies"];
+    _valueInput = 1;
+    _valueInputString = @"";
     _valueTextField.text = [NSString stringWithFormat:@"1 %@",[_mainCurrency objectForKey:@"money_symbol"]];
-        [UIView transitionWithView:_currenciesTableView
-                          duration:0.7f
-                           options:UIViewAnimationOptionTransitionCrossDissolve
-                        animations:^(void) {
-                            [_currenciesTableView reloadData];
-                            [self setMainCurrencyView];
-
-                        } completion:NULL];
+    [UIView transitionWithView:_currenciesTableView
+                      duration:0.7f
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:^(void) {
+                        [_currenciesTableView reloadData];
+                        [self setMainCurrencyView];
+                        
+                    } completion:NULL];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -259,7 +270,7 @@
         [[NSUserDefaults standardUserDefaults] setValue:_activeCurrencies forKey:@"activeCurrencies"];
         
         [_currenciesTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-
+        
         [tableView endUpdates];
     }
 }
@@ -300,11 +311,11 @@
         //NSLog(@"iPhone 6");
         _mainCurrencyViewHeight.constant = 160;
         _topMainValue.constant = -4;
-
+        
         _moneyNamesFontSize = 15;
         _moneyValueMainFontSize = 83;
         _moneyValueOthersFontSize = 36;
-
+        
     } else if ( screenHeight > 480 ){
         //NSLog(@"iPhone 6 Plus");
         _mainCurrencyViewHeight.constant = 180;
@@ -313,12 +324,12 @@
         _moneyNamesFontSize = 16;
         _moneyValueMainFontSize = 85;
         _moneyValueOthersFontSize = 40;
-
+        
     } else {
         //NSLog(@"iPhone 4/4s");
         _mainCurrencyViewHeight.constant = 120;
         _topMainValue.constant = -10;
-
+        
         _moneyNamesFontSize = 13;
         _moneyValueMainFontSize = 70;
         _moneyValueOthersFontSize = 33;
@@ -359,7 +370,7 @@
                         } completion:NULL];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error downloading data");        
+        NSLog(@"Error downloading data");
     }];
     [operation start];
 }
