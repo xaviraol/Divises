@@ -16,5 +16,7 @@
 
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint *topCurrent;
 
+@property (nonatomic) int moneyNamesFontSize;
+@property (nonatomic) int moneyValueOthersFontSize;
 
 @end

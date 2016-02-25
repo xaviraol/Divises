@@ -10,4 +10,16 @@
 
 @interface AddViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
+@property (nonatomic,weak) IBOutlet UIBarButtonItem *barButton;
+
+@property (nonatomic, weak) IBOutlet UITableView *currenciesTableView;
+@property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
+
+@property (nonatomic,weak) IBOutlet UISegmentedControl *segmentedControl;
+
+- (IBAction) segmentAction:(id)sender;
+- (IBAction) backToListAction;
+
+
 @end

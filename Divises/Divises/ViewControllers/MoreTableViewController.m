@@ -10,27 +10,6 @@
 
 @interface MoreTableViewController ()
 
--(IBAction)backToList:(id)sender;
-@property (nonatomic, weak) IBOutlet UIBarButtonItem *barButton;
-@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
-
-@property (nonatomic, weak) IBOutlet UILabel *howTitleLabel;
-@property (nonatomic, weak) IBOutlet UILabel *howTextLabel;
-
-@property (nonatomic, weak) IBOutlet UILabel *currencyTitleLabel;
-@property (nonatomic, weak) IBOutlet UILabel *currencyTextLabel;
-@property (nonatomic, weak) IBOutlet UILabel *currencyInfoLabel;
-
-@property (nonatomic, weak) IBOutlet UILabel *xaviTitleLabel;
-@property (nonatomic, weak) IBOutlet UILabel *xaviTextLabel;
-
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *heightLabelHow;
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *topHowTitle;
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *topHow;
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *topCurrency;
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *topInfoCurrency;
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *topXavi;
-
 @end
 
 @implementation MoreTableViewController

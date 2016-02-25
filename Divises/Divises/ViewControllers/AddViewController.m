@@ -11,55 +11,47 @@
 
 @interface AddViewController ()
 
-@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
-@property (nonatomic,weak) IBOutlet UIBarButtonItem *barButton;
+
 
 //constraints i font sizes:
-@property (nonatomic) int searchBarFontSize;
-@property (nonatomic) int textCellsFontSize;
-
-@property (nonatomic, weak) IBOutlet UITableView *currenciesTableView;
-
-@property (nonatomic, strong) NSMutableArray *allCurrencies;
-
-@property (nonatomic, strong) NSArray *alreadyActiveCurrencies;
-@property (nonatomic, strong) NSMutableArray *activeCurrencies;
-
-@property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
-@property (nonatomic) BOOL searchBarActive;
-
-@property (nonatomic,weak) IBOutlet UISegmentedControl *segmentedControl;
-- (IBAction)segmentAction:(id)sender;
-
-@property (nonatomic,strong) NSArray *popularitySortedCurrencies;
-@property (nonatomic,strong) NSArray *filteredPopularitySortedCurrencies;
-
-
-@property (nonatomic,strong) NSDictionary *lettersSections;
-@property (nonatomic,strong) NSArray *sortedLetters;
-@property (nonatomic,strong) NSDictionary *lettersFilteredSections;
-@property (nonatomic,strong) NSArray *sortedFilteredLetters;
-
-@property (nonatomic, strong) NSArray *allCountries;
-@property (nonatomic, strong) NSDictionary *countriesSections;
-@property (nonatomic, strong) NSArray *sortedCountries;
-@property (nonatomic, strong) NSDictionary *countriesFilteredSections;
-@property (nonatomic, strong) NSArray *sortedFilteredCountries;
-
-@property (nonatomic, strong) NSArray *filteredCountries;
-
-@property (nonatomic) int sorting;
-
-
--(IBAction)backToListAction;
 
 @end
 
-@implementation AddViewController
+@implementation AddViewController{
+    
+    NSMutableArray *allCurrencies;
+    
+    NSArray *alreadyActiveCurrencies;
+    NSMutableArray *activeCurrencies;
+    
+    NSArray *popularitySortedCurrencies;
+    NSArray *filteredPopularitySortedCurrencies;
+    
+    
+    NSDictionary *lettersSections;
+    NSArray *sortedLetters;
+    NSDictionary *lettersFilteredSections;
+    NSArray *sortedFilteredLetters;
+    
+    NSArray *allCountries;
+    NSDictionary *countriesSections;
+    NSArray *sortedCountries;
+    NSDictionary *countriesFilteredSections;
+    NSArray *sortedFilteredCountries;
+    
+    NSArray *filteredCountries;
+    
+    int sorting;
+    BOOL searchBarActive;
+    
+    int searchBarFontSize;
+    int textCellsFontSize; //ha d'anara a la cel·la
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self screenConfiguration];
+    
     // UINavigationBar Appearance
     //--------------------------------------------------------------
     _navigationBar.translucent = NO;
@@ -85,7 +77,7 @@
     UITextField *searchField = [_searchBar valueForKey:@"searchField"];
     searchField.backgroundColor = [UIColor whiteColor];
     searchField.textColor = [UIColor grayColor];
-    [searchField setFont:[UIFont fontWithName:@"Avenir" size:_searchBarFontSize]];
+    [searchField setFont:[UIFont fontWithName:@"Avenir" size:searchBarFontSize]];
     searchField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Search Currencies"];
 
 
@@ -97,51 +89,51 @@
     _segmentedControl.tintColor = UIColorFromRGB(0xF5F5F5);
     _segmentedControl.backgroundColor = UIColorFromRGB(0xF5F5F5);
     [_segmentedControl setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor blackColor],
-                                                 NSFontAttributeName:[UIFont fontWithName:@"Avenir" size:_textCellsFontSize]} forState:UIControlStateNormal];
+                                                 NSFontAttributeName:[UIFont fontWithName:@"Avenir" size:textCellsFontSize]} forState:UIControlStateNormal];
     [_segmentedControl setTitleTextAttributes: @{NSForegroundColorAttributeName:UIColorFromRGB(0xFF4543),
-                                                 NSFontAttributeName:[UIFont fontWithName:@"Avenir" size:_textCellsFontSize]} forState:UIControlStateSelected];
+                                                 NSFontAttributeName:[UIFont fontWithName:@"Avenir" size:textCellsFontSize]} forState:UIControlStateSelected];
 
     //--------------------------------------------------------------
     
-    _searchBarActive = NO;
+    searchBarActive = NO;
 
     // agafem les currencies:
     NSDictionary *currenciesDictionary = [self parseDataFromJsonsToDictionariesfromFilePath:@"RegionCountriesCurrency" andFormat:@".json"];
-    _allCurrencies = [NSMutableArray new];
+    allCurrencies = [NSMutableArray new];
     
     for (NSString *key in [currenciesDictionary allKeys]) {
         NSDictionary *currency = [currenciesDictionary objectForKey:key];
-        [_allCurrencies addObject:currency];
+        [allCurrencies addObject:currency];
     }
     
     // agafem tots els paisos:
     NSDictionary *countriesDictionary = [self parseDataFromJsonsToDictionariesfromFilePath:@"Countries" andFormat:@".json"];
     NSMutableArray *unsortedCountries = [NSMutableArray new];
-    _allCountries = [NSArray new];
+    allCountries = [NSArray new];
     
     for (NSString *key in [countriesDictionary allKeys]) {
         NSDictionary *currency = [countriesDictionary objectForKey:key];
         [unsortedCountries addObject:currency];
     }
-    _allCountries = unsortedCountries;
+    allCountries = unsortedCountries;
     
-    _activeCurrencies = [NSMutableArray new];
-    _alreadyActiveCurrencies = [[NSUserDefaults standardUserDefaults] objectForKey:@"activeCurrencies"];
-    _activeCurrencies = [NSMutableArray arrayWithArray:_alreadyActiveCurrencies];
+    activeCurrencies = [NSMutableArray new];
+    alreadyActiveCurrencies = [[NSUserDefaults standardUserDefaults] objectForKey:@"activeCurrencies"];
+    activeCurrencies = [NSMutableArray arrayWithArray:alreadyActiveCurrencies];
     
-    _sorting = 0;
+    sorting = 0;
     //popularity
-    _popularitySortedCurrencies = [self sortingByPopularity:_allCurrencies];
+    popularitySortedCurrencies = [self sortingByPopularity:allCurrencies];
     
     //letters
-    _lettersSections = [self sortingByLetters:_allCurrencies];
-    NSArray *unsortedLetters = [_lettersSections allKeys];
-    _sortedLetters = [unsortedLetters sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    lettersSections = [self sortingByLetters:allCurrencies];
+    NSArray *unsortedLetters = [lettersSections allKeys];
+    sortedLetters = [unsortedLetters sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 
     //countries
-    _countriesSections = [self sortingByCountry:_allCountries];
-    NSArray *unCountries = [_countriesSections allKeys];
-    _sortedCountries = [unCountries sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    countriesSections = [self sortingByCountry:allCountries];
+    NSArray *unCountries = [countriesSections allKeys];
+    sortedCountries = [unCountries sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -150,9 +142,9 @@
 }
 
 -(IBAction)segmentAction:(id)sender{
-    _sorting = (int)_segmentedControl.selectedSegmentIndex;
-    if (_searchBarActive) {
-        _searchBarActive = NO;
+    sorting = (int)_segmentedControl.selectedSegmentIndex;
+    if (searchBarActive) {
+        searchBarActive = NO;
         _searchBar.text = @"";
     }
     [_currenciesTableView reloadData];
@@ -160,68 +152,68 @@
 
 #pragma mark - Table View Delegate Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    if (_searchBarActive){
-        if (_sorting == 1) {
-            return _lettersFilteredSections.count;
-        }else if (_sorting ==2 ){
-            return _countriesFilteredSections.count;
+    if (searchBarActive){
+        if (sorting == 1) {
+            return lettersFilteredSections.count;
+        }else if (sorting ==2 ){
+            return countriesFilteredSections.count;
         }else{
             return 1;
         }
     }else{
-        if (_sorting == 1) {
-            return _lettersSections.count;
-        }else if (_sorting == 2){
-            return _countriesSections.count;
+        if (sorting == 1) {
+            return lettersSections.count;
+        }else if (sorting == 2){
+            return countriesSections.count;
         }else{
             return 1;
         }
     }
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (_searchBarActive) {
-        switch (_sorting) {
+    if (searchBarActive) {
+        switch (sorting) {
             case 0:
-                return _filteredPopularitySortedCurrencies.count;
+                return filteredPopularitySortedCurrencies.count;
                 break;
             case 1:{
-                NSString *initialChar = [_sortedFilteredLetters objectAtIndex:section];
-                NSArray *currenciesWithThisChar = [_lettersFilteredSections objectForKey:initialChar];
+                NSString *initialChar = [sortedFilteredLetters objectAtIndex:section];
+                NSArray *currenciesWithThisChar = [lettersFilteredSections objectForKey:initialChar];
                 return [currenciesWithThisChar count];
                 break;
             }case 2:{
-                NSString *initialChar = [_sortedFilteredCountries objectAtIndex:section];
-                NSArray *currenciesWithThisChar = [_countriesFilteredSections objectForKey:initialChar];
+                NSString *initialChar = [sortedFilteredCountries objectAtIndex:section];
+                NSArray *currenciesWithThisChar = [countriesFilteredSections objectForKey:initialChar];
                 return [currenciesWithThisChar count];
                 break;
             }default:
-                return _filteredCountries.count;
+                return filteredCountries.count;
                 break;
         }
     }else{
-        if(_sorting == 1 ){
+        if(sorting == 1 ){
             
-            NSString *initialChar = [_sortedLetters objectAtIndex:section];
-            NSArray *currenciesWithThisChar = [_lettersSections objectForKey:initialChar];
+            NSString *initialChar = [sortedLetters objectAtIndex:section];
+            NSArray *currenciesWithThisChar = [lettersSections objectForKey:initialChar];
             return [currenciesWithThisChar count];
             
-        }else if (_sorting==2) {
+        }else if (sorting==2) {
             
-            NSString *initialChar = [_sortedCountries objectAtIndex:section];
-            NSArray *currenciesWithThisChar = [_countriesSections objectForKey:initialChar];
+            NSString *initialChar = [sortedCountries objectAtIndex:section];
+            NSArray *currenciesWithThisChar = [countriesSections objectForKey:initialChar];
             return [currenciesWithThisChar count];
             
         }else{
-            return _allCurrencies.count;
+            return allCurrencies.count;
         }
     }
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    if (_sorting==1) {
+    if (sorting==1) {
         return 40;
-    }else if (_sorting==2){
+    }else if (sorting==2){
         return 40;
     }else{
         return 0;
@@ -230,25 +222,25 @@
 - (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UITableViewHeaderFooterView *av=[[UITableViewHeaderFooterView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
     av.backgroundColor = UIColorFromRGB(0xF5F5F5);
-    if (_sorting == 1) {
+    if (sorting == 1) {
         NSString *initialChar;
-        if (_searchBarActive){
-            initialChar = [_sortedFilteredLetters objectAtIndex:section];
+        if (searchBarActive){
+            initialChar = [sortedFilteredLetters objectAtIndex:section];
         }else{
-            initialChar = [_sortedLetters objectAtIndex:section];
+            initialChar = [sortedLetters objectAtIndex:section];
         }
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 7, 200, 30)];
         [titleLabel setText:initialChar];
         [av addSubview:titleLabel];
         
         return av;
-    }else if (_sorting == 2){
+    }else if (sorting == 2){
         
         NSString *initialChar;
-        if (_searchBarActive){
-            initialChar = [_sortedFilteredCountries objectAtIndex:section];
+        if (searchBarActive){
+            initialChar = [sortedFilteredCountries objectAtIndex:section];
         }else{
-            initialChar = [_sortedCountries objectAtIndex:section];
+            initialChar = [sortedCountries objectAtIndex:section];
         }
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(25, 7, 200, 30)];
         [titleLabel setText:initialChar];
@@ -263,29 +255,34 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *CellIdentifier = @"addCurrencyCell";
-    AddCurrencyCell *cell = [_currenciesTableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    NSDictionary *currency = [NSDictionary new];
-    if (cell == nil){
-    cell = [[AddCurrencyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
+    
+    AddCurrencyCell *cell = (AddCurrencyCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:CellIdentifier owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
+    
+    NSDictionary *currency = [NSDictionary new];
+
     cell.accessoryType = UITableViewCellAccessoryNone;
-    [cell.labelName setFont:[UIFont fontWithName:@"Avenir-Heavy" size:_textCellsFontSize]];
-    if (_searchBarActive) {
-        switch (_sorting) {
+    [cell.labelName setFont:[UIFont fontWithName:@"Avenir-Heavy" size:textCellsFontSize]];
+    if (searchBarActive) {
+        switch (sorting) {
             case 0:{
-                currency = _filteredPopularitySortedCurrencies[indexPath.row];
+                currency = filteredPopularitySortedCurrencies[indexPath.row];
                 cell.labelName.text = [NSString stringWithFormat:@"%@ - %@", [currency objectForKey:@"money_symbol"],[currency objectForKey:@"money_name"]];
                 break;
             }case 1:{
                 
-                NSString *initialChar = [_sortedFilteredLetters objectAtIndex:indexPath.section];
-                NSArray *currenciesWithThisChar = [_lettersFilteredSections objectForKey:initialChar];
+                NSString *initialChar = [sortedFilteredLetters objectAtIndex:indexPath.section];
+                NSArray *currenciesWithThisChar = [lettersFilteredSections objectForKey:initialChar];
                 currency = [currenciesWithThisChar objectAtIndex:indexPath.row];
                 cell.labelName.text = [NSString stringWithFormat:@"%@ - %@", [currency objectForKey:@"money_symbol"],[currency objectForKey:@"money_name"]];
                 break;
             }case 2:{
-                NSString *initialChar = [_sortedFilteredCountries objectAtIndex:indexPath.section];
-                NSArray *currenciesWithThisChar = [_countriesFilteredSections objectForKey:initialChar];
+                NSString *initialChar = [sortedFilteredCountries objectAtIndex:indexPath.section];
+                NSArray *currenciesWithThisChar = [countriesFilteredSections objectForKey:initialChar];
                 currency = [currenciesWithThisChar objectAtIndex:indexPath.row];
                 cell.labelName.text = [NSString stringWithFormat:@"%@ - %@",[currency objectForKey:@"country_name"],[currency objectForKey:@"money_symbol"]];
                 break;
@@ -293,20 +290,20 @@
                 break;
         }
     }else{
-        switch (_sorting) {
+        switch (sorting) {
             case 0:{
-                currency = _popularitySortedCurrencies[indexPath.row];
+                currency = popularitySortedCurrencies[indexPath.row];
                 cell.labelName.text = [NSString stringWithFormat:@"%@ - %@", [currency objectForKey:@"money_symbol"],[currency objectForKey:@"money_name"]];
                 break;
             }case 1:{
-                NSString *initialChar = [_sortedLetters objectAtIndex:indexPath.section];
-                NSArray *currenciesWithThisChar = [_lettersSections objectForKey:initialChar];
+                NSString *initialChar = [sortedLetters objectAtIndex:indexPath.section];
+                NSArray *currenciesWithThisChar = [lettersSections objectForKey:initialChar];
                 currency = [currenciesWithThisChar objectAtIndex:indexPath.row];
                 cell.labelName.text = [NSString stringWithFormat:@"%@ - %@", [currency objectForKey:@"money_symbol"],[currency objectForKey:@"money_name"]];
                 break;
             }case 2:{
-                NSString *initialChar = [_sortedCountries objectAtIndex:indexPath.section];
-                NSArray *currenciesWithThisChar = [_countriesSections objectForKey:initialChar];
+                NSString *initialChar = [sortedCountries objectAtIndex:indexPath.section];
+                NSArray *currenciesWithThisChar = [countriesSections objectForKey:initialChar];
                 currency = [currenciesWithThisChar objectAtIndex:indexPath.row];
                 cell.labelName.text = [NSString stringWithFormat:@"%@ - %@",[currency objectForKey:@"country_name"],[currency objectForKey:@"money_symbol"]];
                 break;
@@ -317,7 +314,7 @@
     }
     NSString *currentCode = [currency objectForKey:@"money_code"];
     cell.imageSelected.hidden = YES;
-    for (NSDictionary *dict in _activeCurrencies) {
+    for (NSDictionary *dict in activeCurrencies) {
         NSString *activeCode = [dict objectForKey:@"money_code"];
         if([currentCode isEqualToString:activeCode]){
             //cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -334,37 +331,37 @@
     NSDictionary *currency = [NSDictionary new];
     AddCurrencyCell *cell = (AddCurrencyCell*)[_currenciesTableView cellForRowAtIndexPath:indexPath];
     
-    if (_searchBarActive) {
-        switch (_sorting) {
+    if (searchBarActive) {
+        switch (sorting) {
             case 0:
-                currency = _filteredPopularitySortedCurrencies[indexPath.row];
+                currency = filteredPopularitySortedCurrencies[indexPath.row];
                 break;
             case 1:{
-                NSString *initialChar = [_sortedFilteredLetters objectAtIndex:indexPath.section];
-                NSArray *currenciesWithThisChar = [_lettersFilteredSections objectForKey:initialChar];
+                NSString *initialChar = [sortedFilteredLetters objectAtIndex:indexPath.section];
+                NSArray *currenciesWithThisChar = [lettersFilteredSections objectForKey:initialChar];
                 currency = [currenciesWithThisChar objectAtIndex:indexPath.row];
                 break;
             }case 2:{
-                NSString *initialChar = [_sortedFilteredCountries objectAtIndex:indexPath.section];
-                NSArray *currenciesWithThisChar = [_countriesFilteredSections objectForKey:initialChar];
+                NSString *initialChar = [sortedFilteredCountries objectAtIndex:indexPath.section];
+                NSArray *currenciesWithThisChar = [countriesFilteredSections objectForKey:initialChar];
                 currency = [currenciesWithThisChar objectAtIndex:indexPath.row];
                 break;
             }default:
                 break;
         }
     }else{
-        switch (_sorting) {
+        switch (sorting) {
             case 0:
-                currency = _popularitySortedCurrencies[indexPath.row];
+                currency = popularitySortedCurrencies[indexPath.row];
                 break;
             case 1:{
-                NSString *initialChar = [_sortedLetters objectAtIndex:indexPath.section];
-                NSArray *currenciesWithThisChar = [_lettersSections objectForKey:initialChar];
+                NSString *initialChar = [sortedLetters objectAtIndex:indexPath.section];
+                NSArray *currenciesWithThisChar = [lettersSections objectForKey:initialChar];
                 currency = [currenciesWithThisChar objectAtIndex:indexPath.row];
                 break;
             }case 2:{
-                NSString *initialChar = [_sortedCountries objectAtIndex:indexPath.section];
-                NSArray *currenciesWithThisChar = [_countriesSections objectForKey:initialChar];
+                NSString *initialChar = [sortedCountries objectAtIndex:indexPath.section];
+                NSArray *currenciesWithThisChar = [countriesSections objectForKey:initialChar];
                 currency = [currenciesWithThisChar objectAtIndex:indexPath.row];
                 break;
             }default:
@@ -377,8 +374,8 @@
     NSString *activeCode;
     NSDictionary *currencyTemp;
     
-    for (int i=0; i<_activeCurrencies.count; i++) {
-        currencyTemp = _activeCurrencies[i];
+    for (int i=0; i<activeCurrencies.count; i++) {
+        currencyTemp = activeCurrencies[i];
         activeCode = [currencyTemp objectForKey:@"money_code"];
         if ([currentCode isEqualToString:activeCode]) {
             jahies = YES;
@@ -388,19 +385,19 @@
     if (jahies) {
         //cell.accessoryType = UITableViewCellAccessoryNone;
         cell.imageSelected.hidden = YES;
-        [_activeCurrencies removeObject:currencyTemp];
+        [activeCurrencies removeObject:currencyTemp];
     }else{
         //cell.accessoryType = UITableViewCellAccessoryCheckmark;
         cell.imageSelected.hidden = NO;
-        for (NSDictionary *dict in _allCurrencies) {
+        for (NSDictionary *dict in allCurrencies) {
             NSString *moneyCode = [dict objectForKey:@"money_code"];
             if ([moneyCode isEqualToString:currentCode]) {
-                [_activeCurrencies addObject:dict];
+                [activeCurrencies addObject:dict];
                 break;
             }
         }
     }
-    [[NSUserDefaults standardUserDefaults] setValue:_activeCurrencies forKey:@"activeCurrencies"];
+    [[NSUserDefaults standardUserDefaults] setValue:activeCurrencies forKey:@"activeCurrencies"];
     //NSLog(@"\n\nActive Currencies: %lu",(unsigned long)_activeCurrencies.count);
     [_searchBar resignFirstResponder];
 }
@@ -412,19 +409,19 @@
 
     AddCurrencyCell *cell = (AddCurrencyCell*)[_currenciesTableView cellForRowAtIndexPath:indexPath];
     
-    if (_searchBarActive) {
-        switch (_sorting) {
+    if (searchBarActive) {
+        switch (sorting) {
             case 0:
-                currency = _filteredPopularitySortedCurrencies[indexPath.row];
+                currency = filteredPopularitySortedCurrencies[indexPath.row];
                 break;
             case 1:{
-                NSString *initialChar = [_sortedFilteredLetters objectAtIndex:indexPath.section];
-                NSArray *currenciesWithThisChar = [_lettersFilteredSections objectForKey:initialChar];
+                NSString *initialChar = [sortedFilteredLetters objectAtIndex:indexPath.section];
+                NSArray *currenciesWithThisChar = [lettersFilteredSections objectForKey:initialChar];
                 currency = [currenciesWithThisChar objectAtIndex:indexPath.row];
                 break;
             }case 2:{
-                NSString *initialChar = [_sortedFilteredCountries objectAtIndex:indexPath.section];
-                NSArray *currenciesWithThisChar = [_countriesFilteredSections objectForKey:initialChar];
+                NSString *initialChar = [sortedFilteredCountries objectAtIndex:indexPath.section];
+                NSArray *currenciesWithThisChar = [countriesFilteredSections objectForKey:initialChar];
                 currency = [currenciesWithThisChar objectAtIndex:indexPath.row];
                 break;
                 
@@ -432,18 +429,18 @@
                 break;
         }
     }else{
-        switch (_sorting) {
+        switch (sorting) {
             case 0:
-                currency = _popularitySortedCurrencies[indexPath.row];
+                currency = popularitySortedCurrencies[indexPath.row];
                 break;
             case 1:{
-                NSString *initialChar = [_sortedLetters objectAtIndex:indexPath.section];
-                NSArray *currenciesWithThisChar = [_lettersSections objectForKey:initialChar];
+                NSString *initialChar = [sortedLetters objectAtIndex:indexPath.section];
+                NSArray *currenciesWithThisChar = [lettersSections objectForKey:initialChar];
                 currency = [currenciesWithThisChar objectAtIndex:indexPath.row];
                 break;
             }case 2:{
-                NSString *initialChar = [_sortedCountries objectAtIndex:indexPath.section];
-                NSArray *currenciesWithThisChar = [_countriesSections objectForKey:initialChar];
+                NSString *initialChar = [sortedCountries objectAtIndex:indexPath.section];
+                NSArray *currenciesWithThisChar = [countriesSections objectForKey:initialChar];
                 currency = [currenciesWithThisChar objectAtIndex:indexPath.row];
                 break;
             }default:
@@ -455,8 +452,8 @@
     NSString *activeCode;
     NSDictionary *currencyTemp;
     
-    for (int i=0; i<_activeCurrencies.count; i++) {
-        currencyTemp = _activeCurrencies[i];
+    for (int i=0; i<activeCurrencies.count; i++) {
+        currencyTemp = activeCurrencies[i];
         activeCode = [currencyTemp objectForKey:@"money_code"];
         if ([currentCode isEqualToString:activeCode]) {
             jahies = YES;
@@ -466,20 +463,20 @@
     if (jahies) {
         //cell.accessoryType = UITableViewCellAccessoryNone;
         cell.imageSelected.hidden = YES;
-        [_activeCurrencies removeObject:currencyTemp];
+        [activeCurrencies removeObject:currencyTemp];
     }else{
         //cell.accessoryType = UITableViewCellAccessoryCheckmark;
         cell.imageSelected.hidden = NO;
-        for (NSDictionary *dict in _allCurrencies) {
+        for (NSDictionary *dict in allCurrencies) {
             NSString *moneyCode = [dict objectForKey:@"money_code"];
             if ([moneyCode isEqualToString:currentCode]) {
-                [_activeCurrencies addObject:dict];
+                [activeCurrencies addObject:dict];
                 break;
             }
         }
     }
-    [[NSUserDefaults standardUserDefaults] setValue:_activeCurrencies forKey:@"activeCurrencies"];
-    NSLog(@"\n\nActive Currencies: %lu",(unsigned long)_activeCurrencies.count);
+    [[NSUserDefaults standardUserDefaults] setValue:activeCurrencies forKey:@"activeCurrencies"];
+    NSLog(@"\n\nActive Currencies: %lu",(unsigned long)activeCurrencies.count);
     [_searchBar resignFirstResponder];
 
 }
@@ -503,19 +500,19 @@
 #pragma mark -
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    _searchBarActive = YES;
+    searchBarActive = YES;
     if (searchText.length == 0) {
-        switch (_sorting) {
+        switch (sorting) {
             case 0:
-                _filteredPopularitySortedCurrencies = _popularitySortedCurrencies;
+                filteredPopularitySortedCurrencies = popularitySortedCurrencies;
                 break;
             case 1:
-                _lettersFilteredSections = _lettersSections;
-                _sortedFilteredLetters = [_lettersFilteredSections allKeys];
+                lettersFilteredSections = lettersSections;
+                sortedFilteredLetters = [lettersFilteredSections allKeys];
                 break;
             case 2:
-                _countriesFilteredSections = _countriesSections;
-                _sortedFilteredCountries = _sortedCountries;
+                countriesFilteredSections = countriesSections;
+                sortedFilteredCountries = sortedCountries;
                 break;
             default:
                 break;
@@ -524,28 +521,28 @@
         NSString *predicateFormat = @"%K CONTAINS[cd] %@";
         NSString *searchAttribute;
         
-        switch (_sorting) {
+        switch (sorting) {
             case 0:{
                 searchAttribute = @"money_name";
                 NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, searchAttribute, searchText];
-                NSArray *tempArray = [_allCurrencies filteredArrayUsingPredicate:predicate];
-                _filteredPopularitySortedCurrencies = tempArray;
+                NSArray *tempArray = [allCurrencies filteredArrayUsingPredicate:predicate];
+                filteredPopularitySortedCurrencies = tempArray;
                 break;
             }
             case 1:{
                 searchAttribute = @"money_name";
                 NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, searchAttribute, searchText];
-                NSArray *tempArray = [_allCurrencies filteredArrayUsingPredicate:predicate];
-                _lettersFilteredSections = [self sortingByLetters:tempArray];
-                _sortedFilteredLetters = [_lettersFilteredSections allKeys];
+                NSArray *tempArray = [allCurrencies filteredArrayUsingPredicate:predicate];
+                lettersFilteredSections = [self sortingByLetters:tempArray];
+                sortedFilteredLetters = [lettersFilteredSections allKeys];
                 break;
             }
             case 2:{
                 searchAttribute = @"country_name";
                 NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, searchAttribute, searchText];
-                NSArray *tempArray = [_allCountries filteredArrayUsingPredicate:predicate];
-                _countriesFilteredSections = [self sortingByLetters:tempArray];
-                _sortedFilteredCountries = [_countriesFilteredSections allKeys];
+                NSArray *tempArray = [allCountries filteredArrayUsingPredicate:predicate];
+                countriesFilteredSections = [self sortingByLetters:tempArray];
+                sortedFilteredCountries = [countriesFilteredSections allKeys];
                 break;
             }
             default:
@@ -556,11 +553,11 @@
 }
 
 -(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
-    _searchBarActive = YES;
+    searchBarActive = YES;
 }
 
 -(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
-    _searchBarActive = NO;
+    searchBarActive = NO;
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -587,21 +584,21 @@
     NSArray *output = [currencies sortedArrayUsingDescriptors:sortDescriptors];
     
     //-----
-    NSMutableDictionary *lettersSections = [NSMutableDictionary new];
+    NSMutableDictionary *lettersSectionsDict = [NSMutableDictionary new];
     
     for (NSDictionary *currency in output) {
         NSRange range = NSMakeRange(0, 1);
         NSString *moneyName = [currency objectForKey:@"money_name"];
         NSString *initialChar = [moneyName substringWithRange:range];
         
-        NSMutableArray *currenciesWithThisChar = [lettersSections objectForKey:initialChar];
+        NSMutableArray *currenciesWithThisChar = [lettersSectionsDict objectForKey:initialChar];
         if (currenciesWithThisChar == nil) {
             currenciesWithThisChar = [NSMutableArray array];
-            [lettersSections setObject:currenciesWithThisChar forKey:initialChar];
+            [lettersSectionsDict setObject:currenciesWithThisChar forKey:initialChar];
         }
         [currenciesWithThisChar addObject:currency];
     }
-    return  lettersSections;
+    return  lettersSectionsDict;
 }
 
 
@@ -612,23 +609,23 @@
     NSArray *output = [currencies sortedArrayUsingDescriptors:sortDescriptors];
     
     //----
-    NSMutableDictionary *countriesSections = [NSMutableDictionary new];
+    NSMutableDictionary *countriesSectionsDict = [NSMutableDictionary new];
     
     for (NSDictionary *country in output) {
         NSRange range = NSMakeRange(0, 1);
         NSString *countryName = [country objectForKey:@"country_name"];
         NSString *initialChar = [countryName substringWithRange:range];
         
-        NSMutableArray *currenciesWithThisChar = [countriesSections objectForKey:initialChar];
+        NSMutableArray *currenciesWithThisChar = [countriesSectionsDict objectForKey:initialChar];
         if (currenciesWithThisChar == nil) {
             currenciesWithThisChar = [NSMutableArray array];
-            [countriesSections setObject:currenciesWithThisChar forKey:initialChar];
+            [countriesSectionsDict setObject:currenciesWithThisChar forKey:initialChar];
         }
         [currenciesWithThisChar addObject:country];
     }
     //NSLog(@"%@\n\n",countriesSections);
     
-    return  countriesSections;
+    return  countriesSectionsDict;
 }
 
 -(void)screenConfiguration{
@@ -636,31 +633,30 @@
     
     if( screenHeight > 480 && screenHeight < 667 ){
         //NSLog(@"iPhone 5/5s");
-        _textCellsFontSize = 15;
-        _searchBarFontSize = 13;
+        textCellsFontSize = 15;
+        searchBarFontSize = 13;
         
     } else if ( screenHeight > 480 && screenHeight < 736 ){
         //NSLog(@"iPhone 6");
-        _textCellsFontSize = 17;
-        _searchBarFontSize = 15;
+        textCellsFontSize = 17;
+        searchBarFontSize = 15;
         
     } else if ( screenHeight > 480 ){
         //NSLog(@"iPhone 6 Plus");
-        _textCellsFontSize = 17;
-        _searchBarFontSize = 15;
+        textCellsFontSize = 17;
+        searchBarFontSize = 15;
         
     } else {
         //NSLog(@"iPhone 4/4s");
-        _textCellsFontSize = 15;
-        _searchBarFontSize = 13;
-
+        textCellsFontSize = 15;
+        searchBarFontSize = 13;
     }
 }
 
 #pragma mark - Navigation Actions
 
 -(IBAction)backToListAction{
-    [[NSUserDefaults standardUserDefaults] setValue:_activeCurrencies forKey:@"activeCurrencies"];
+    [[NSUserDefaults standardUserDefaults] setValue:activeCurrencies forKey:@"activeCurrencies"];
     [self performSegueWithIdentifier:@"toListSegue" sender:nil];
 }
 @end
