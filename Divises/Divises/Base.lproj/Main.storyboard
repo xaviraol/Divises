@@ -421,7 +421,7 @@
                                     <segment title="Country"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentAction:" destination="raR-l6-WcO" eventType="valueChanged" id="CbC-R2-756"/>
+                                    <action selector="segmentAction:" destination="raR-l6-WcO" eventType="valueChanged" id="31L-sA-rU0"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0CW-Ag-BC7">
