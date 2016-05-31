@@ -21,6 +21,7 @@
     //[[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"mainCurrency"];
     //[[NSUserDefaults standardUserDefaults] setValue:nil forKey:@"activeCurrencies"];
     
+    // TODO: tot això ha d'anaar fora d'aquí.
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"activeCurrencies"] == nil) {
         NSMutableArray *defaultCurrencies = [NSMutableArray new];
         

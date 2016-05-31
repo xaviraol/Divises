@@ -35,6 +35,7 @@
 		473A3D791C7CD04900BEA96A /* three@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 473A3D4F1C7CD04900BEA96A /* three@3x.png */; };
 		473A3D811C7CD04900BEA96A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 473A3D5D1C7CD04900BEA96A /* Main.storyboard */; };
 		473A3D821C7CD04900BEA96A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 473A3D5F1C7CD04900BEA96A /* Assets.xcassets */; };
+		473AEEC91CFE0D5300114D38 /* CurrencyDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 473AEEC81CFE0D5300114D38 /* CurrencyDataHelper.m */; };
 		47BCA4831CFB3439001BDD2F /* Countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 47BCA4801CFB3439001BDD2F /* Countries.json */; };
 		47BCA4841CFB3439001BDD2F /* DefaultRates.json in Resources */ = {isa = PBXBuildFile; fileRef = 47BCA4811CFB3439001BDD2F /* DefaultRates.json */; };
 		47BCA4851CFB3439001BDD2F /* RegionCountriesCurrency.json in Resources */ = {isa = PBXBuildFile; fileRef = 47BCA4821CFB3439001BDD2F /* RegionCountriesCurrency.json */; };
@@ -83,6 +84,8 @@
 		473A3D5E1C7CD04900BEA96A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		473A3D5F1C7CD04900BEA96A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		473A3D831C7CD1F600BEA96A /* Divises-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Divises-PrefixHeader.pch"; sourceTree = "<group>"; };
+		473AEEC71CFE0D5300114D38 /* CurrencyDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyDataHelper.h; sourceTree = "<group>"; };
+		473AEEC81CFE0D5300114D38 /* CurrencyDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrencyDataHelper.m; sourceTree = "<group>"; };
 		47BCA4801CFB3439001BDD2F /* Countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Countries.json; sourceTree = "<group>"; };
 		47BCA4811CFB3439001BDD2F /* DefaultRates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DefaultRates.json; sourceTree = "<group>"; };
 		47BCA4821CFB3439001BDD2F /* RegionCountriesCurrency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RegionCountriesCurrency.json; sourceTree = "<group>"; };
@@ -260,6 +263,8 @@
 			children = (
 				47BCA4A81CFB3604001BDD2F /* ConnectionManager.h */,
 				47BCA4A91CFB3604001BDD2F /* ConnectionManager.m */,
+				473AEEC71CFE0D5300114D38 /* CurrencyDataHelper.h */,
+				473AEEC81CFE0D5300114D38 /* CurrencyDataHelper.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -428,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47BCA49B1CFB34BE001BDD2F /* ListViewController.m in Sources */,
+				473AEEC91CFE0D5300114D38 /* CurrencyDataHelper.m in Sources */,
 				47BCA4A21CFB359B001BDD2F /* ActiveTableViewCell.m in Sources */,
 				47BCA4901CFB345F001BDD2F /* BottomToTopSegue.m in Sources */,
 				47BCA4911CFB345F001BDD2F /* LefttoRightSegue.m in Sources */,
