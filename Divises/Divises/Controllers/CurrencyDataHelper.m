@@ -12,7 +12,7 @@
 
 //TODO: practicament fer el mateix que en el sense-ios-sdk a l'hoar de passar de JSON a dictionary.
 
-- (NSDictionary *)parseDataFromJsonsToDictionariesfromFilePath:(NSString*)filepath andFormat:(NSString *)formatType{
++ (NSDictionary *)parseDataFromJsonsToDictionariesfromFilePath:(NSString*)filepath andFormat:(NSString *)formatType{
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:filepath ofType:formatType];
     
@@ -22,6 +22,18 @@
     NSDictionary *output = result;
     
     return  output;
+}
+
++ (double) calculateChange:(NSNumber *)value fromCurrentCurrency:(NSString *)currentCurrencyCode toMainCurrency:(NSString *)mainCurrencyCode{
+    //TODO: fer-ho més maco, valor1, resultat2... és lleig.
+    NSDictionary *currencyUpdated = [[NSUserDefaults standardUserDefaults] objectForKey:@"currencyUpdated"];
+    NSNumber *valor1 = [currencyUpdated objectForKey:currentCurrencyCode];
+    double resultat = [valor1 doubleValue] / [value doubleValue];
+    
+    NSNumber *valor2 = [currencyUpdated objectForKey:mainCurrencyCode];
+    double resultat2 = [valor2 doubleValue] / resultat;
+    
+    return resultat2;
 }
 
 @end

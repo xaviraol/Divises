@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AFNetworking.h"
+#import "CurrencyDataHelper.h"
 
 
 @interface AppDelegate ()
@@ -25,7 +26,7 @@
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"activeCurrencies"] == nil) {
         NSMutableArray *defaultCurrencies = [NSMutableArray new];
         
-        NSDictionary *currenciesDictionary = [self parseDataFromJsonsToDictionariesfromFilePath:@"RegionCountriesCurrency" andFormat:@".json"];
+        NSDictionary *currenciesDictionary = [CurrencyDataHelper parseDataFromJsonsToDictionariesfromFilePath:@"RegionCountriesCurrency" andFormat:@".json"];
         
         for (NSString *key in [currenciesDictionary allKeys]) {
             if ([key isEqualToString:@"EUR"]|| [key isEqualToString:@"USD"]|| [key isEqualToString:@"GBP"]||[key isEqualToString:@"CNY"] ) {
@@ -39,23 +40,11 @@
         }
     }
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"currencyUpdated"] == nil) {
-        NSDictionary *localRates = [self parseDataFromJsonsToDictionariesfromFilePath:@"DefaultRates" andFormat:@".json"];
+        NSDictionary *localRates = [CurrencyDataHelper parseDataFromJsonsToDictionariesfromFilePath:@"DefaultRates" andFormat:@".json"];
         [[NSUserDefaults standardUserDefaults] setValue:localRates forKey:@"currencyUpdated"];
         //NSLog(@"LocalSaved: %@",localRates);
     }
     return YES;
-}
-- (NSDictionary *)parseDataFromJsonsToDictionariesfromFilePath:(NSString*)filepath andFormat:(NSString *)formatType{
-    
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:filepath ofType:formatType];
-    
-    NSData* data = [NSData dataWithContentsOfFile:filePath];
-    __autoreleasing NSError* error = nil;
-    id result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    NSDictionary *output = result;
-    //NSLog(@"Countries: %lu",(unsigned long)output.count);
-    
-    return  output;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

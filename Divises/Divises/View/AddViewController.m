@@ -8,6 +8,7 @@
 
 #import "AddViewController.h"
 #import "AddCurrencyCell.h"
+#import "CurrencyDataHelper.h"
 
 @interface AddViewController ()
 
@@ -79,7 +80,7 @@
                                                  NSFontAttributeName:[UIFont fontWithName:@"Avenir" size:textCellsFontSize]} forState:UIControlStateSelected];
     
     //currencies from the json file.
-    NSDictionary *currenciesDictionary = [self parseDataFromJsonsToDictionariesfromFilePath:@"RegionCountriesCurrency" andFormat:@".json"];
+    NSDictionary *currenciesDictionary = [CurrencyDataHelper parseDataFromJsonsToDictionariesfromFilePath:@"RegionCountriesCurrency" andFormat:@".json"];
     allCurrencies = [NSMutableArray new];
     
     for (NSString *key in [currenciesDictionary allKeys]) {
@@ -88,7 +89,7 @@
     }
     
     //sountries from the json file.
-    NSDictionary *countriesDictionary = [self parseDataFromJsonsToDictionariesfromFilePath:@"Countries" andFormat:@".json"];
+    NSDictionary *countriesDictionary = [CurrencyDataHelper parseDataFromJsonsToDictionariesfromFilePath:@"Countries" andFormat:@".json"];
     NSMutableArray *unsortedCountries = [NSMutableArray new];
     allCountries = [NSArray new];
     
@@ -310,20 +311,6 @@
     NSLog(@"\n\nActive Currencies: %lu",(unsigned long)activeCurrencies.count);
     [_searchBar resignFirstResponder];
     
-}
-
-#pragma mark - parsingJson
-
-- (NSDictionary *)parseDataFromJsonsToDictionariesfromFilePath:(NSString*)filepath andFormat:(NSString *)formatType{
-    
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:filepath ofType:formatType];
-    
-    NSData* data = [NSData dataWithContentsOfFile:filePath];
-    __autoreleasing NSError* error = nil;
-    id result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    NSDictionary *output = result;
-    
-    return  output;
 }
 
 #pragma mark - UISearchBarDelegate

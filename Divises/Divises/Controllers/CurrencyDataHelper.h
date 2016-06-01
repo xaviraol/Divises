@@ -10,6 +10,8 @@
 
 @interface CurrencyDataHelper : NSObject
 
-- (NSDictionary *)parseDataFromJsonsToDictionariesfromFilePath:(NSString*)filepath andFormat:(NSString *)formatType;
++ (NSDictionary *)parseDataFromJsonsToDictionariesfromFilePath:(NSString*)filepath andFormat:(NSString *)formatType;
+
++ (double) calculateChange:(NSNumber *)value fromCurrentCurrency:(NSString *)currentCurrencyCode toMainCurrency:(NSString *)mainCurrencyCode;
 
 @end

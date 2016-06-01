@@ -11,7 +11,7 @@
 @interface ConnectionManager : NSObject
 
 
--(void) downloadCountriesCurrency;
+- (void) downloadCountriesCurrency;
 
 
 @end

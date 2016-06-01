@@ -8,6 +8,7 @@
 
 #import "ListViewController.h"
 #import "AFNetworking.h"
+#import "CurrencyDataHelper.h"
 #import "ActiveTableViewCell.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -188,13 +189,13 @@
 
     currency = secondaryCurrencies[indexPath.row];
     
-    double exchange = [self calculateChange:[NSNumber numberWithDouble:valueInput] fromCurrentCurrency:[mainCurrency objectForKey:@"money_code"] toMainCurrency:[currency objectForKey:@"money_code"]];
+    double exchange = [CurrencyDataHelper calculateChange:[NSNumber numberWithDouble:valueInput] fromCurrentCurrency:[mainCurrency objectForKey:@"money_code"] toMainCurrency:[currency objectForKey:@"money_code"]];
     cell.valueLabel.text = [NSString stringWithFormat:@"%@ %@",[numberFormatter stringFromNumber:[NSNumber numberWithDouble:exchange]],[currency objectForKey:@"money_symbol"]];
     
     NSString *moneyText = [NSString stringWithFormat:@"%@",[currency objectForKey:@"money_name"]];
     [cell.moneyNameLabel setText: [moneyText uppercaseString]];
     
-    double currentValue = [self calculateChange:[NSNumber numberWithInt:1] fromCurrentCurrency:[currency objectForKey:@"money_code"] toMainCurrency:[mainCurrency objectForKey:@"money_code"]];
+    double currentValue = [CurrencyDataHelper calculateChange:[NSNumber numberWithInt:1] fromCurrentCurrency:[currency objectForKey:@"money_code"] toMainCurrency:[mainCurrency objectForKey:@"money_code"]];
     
     cell.currentValueLabel.text = [NSString stringWithFormat:@"1 %@ = %@ %@", [currency objectForKey:@"money_symbol"],[numberFormatter stringFromNumber:[NSNumber numberWithDouble:currentValue]], [mainCurrency objectForKey:@"money_symbol"]];
     
@@ -238,18 +239,6 @@
         
         [tableView endUpdates];
     }
-}
-
--(double) calculateChange:(NSNumber *)value fromCurrentCurrency:(NSString *)currentCurrencyCode toMainCurrency:(NSString *)mainCurrencyCode{
-    
-    NSDictionary *currencyUpdated = [[NSUserDefaults standardUserDefaults] objectForKey:@"currencyUpdated"];
-    NSNumber *valor1 = [currencyUpdated objectForKey:currentCurrencyCode];
-    double resultat = [valor1 doubleValue] / [value doubleValue];
-    
-    NSNumber *valor2 = [currencyUpdated objectForKey:mainCurrencyCode];
-    double resultat2 = [valor2 doubleValue] / resultat;
-    
-    return resultat2;
 }
 
 -(IBAction)addCurrencyAction{
@@ -341,18 +330,5 @@
     }];
     [operation start];
 }
-
-- (NSDictionary *)parseDataFromJsonsToDictionariesfromFilePath:(NSString*)filepath andFormat:(NSString *)formatType{
-    
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:filepath ofType:formatType];
-    
-    NSData* data = [NSData dataWithContentsOfFile:filePath];
-    __autoreleasing NSError* error = nil;
-    id result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    NSDictionary *output = result;
-    
-    return  output;
-}
-
 
 @end
