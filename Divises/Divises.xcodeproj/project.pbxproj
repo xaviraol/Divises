@@ -49,6 +49,7 @@
 		47BCA4A21CFB359B001BDD2F /* ActiveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BCA49F1CFB359B001BDD2F /* ActiveTableViewCell.m */; };
 		47BCA4A31CFB359B001BDD2F /* AddCurrencyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BCA4A11CFB359B001BDD2F /* AddCurrencyCell.m */; };
 		47BCA4AA1CFB3604001BDD2F /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BCA4A91CFB3604001BDD2F /* ConnectionManager.m */; };
+		47C7AD5D1D00A83B0053CD5D /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C7AD5C1D00A83B0053CD5D /* Currency.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +110,8 @@
 		47BCA4A11CFB359B001BDD2F /* AddCurrencyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCurrencyCell.m; sourceTree = "<group>"; };
 		47BCA4A81CFB3604001BDD2F /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
 		47BCA4A91CFB3604001BDD2F /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionManager.m; sourceTree = "<group>"; };
+		47C7AD5B1D00A83B0053CD5D /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
+		47C7AD5C1D00A83B0053CD5D /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Currency.m; sourceTree = "<group>"; };
 		615B4EB9117FE4EFD1428C22 /* Pods-Divises.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Divises.release.xcconfig"; path = "Pods/Target Support Files/Pods-Divises/Pods-Divises.release.xcconfig"; sourceTree = "<group>"; };
 		77E31F69436E502149C92B14 /* Pods-Divises.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Divises.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Divises/Pods-Divises.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +149,7 @@
 		473A3D151C7CCF3500BEA96A /* Divises */ = {
 			isa = PBXGroup;
 			children = (
+				47C7AD5A1D00A8190053CD5D /* Model */,
 				47BCA4A71CFB3604001BDD2F /* Controllers */,
 				47BCA4861CFB345F001BDD2F /* View */,
 				473A3D391C7CD04900BEA96A /* Resources */,
@@ -267,6 +271,15 @@
 				473AEEC81CFE0D5300114D38 /* CurrencyDataHelper.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		47C7AD5A1D00A8190053CD5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47C7AD5B1D00A83B0053CD5D /* Currency.h */,
+				47C7AD5C1D00A83B0053CD5D /* Currency.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7EDB5C7B6B64BFB6E5B022E0 /* Frameworks */ = {
@@ -444,6 +457,7 @@
 				473A3D181C7CCF3500BEA96A /* main.m in Sources */,
 				47BCA4AA1CFB3604001BDD2F /* ConnectionManager.m in Sources */,
 				47BCA4931CFB345F001BDD2F /* TopToBottomSegue.m in Sources */,
+				47C7AD5D1D00A83B0053CD5D /* Currency.m in Sources */,
 				47BCA49A1CFB34BE001BDD2F /* AddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

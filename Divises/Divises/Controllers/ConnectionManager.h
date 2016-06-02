@@ -10,8 +10,6 @@
 
 @interface ConnectionManager : NSObject
 
-
 - (void) downloadCountriesCurrency;
-
 
 @end
