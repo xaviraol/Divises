@@ -10,7 +10,10 @@
 
 @interface MoreTableViewController ()
 
+- (IBAction)linkToWeb:(id)sender;
 @end
+
+
 
 @implementation MoreTableViewController
 
@@ -104,6 +107,11 @@
     [self performSegueWithIdentifier:@"backToListSegue" sender:nil];
 }
 
+- (IBAction)linkToWeb:(id)sender{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.xaviramosoliver.com"]];
+
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -113,5 +121,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
+
 
 @end
